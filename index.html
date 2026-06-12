@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Агентство недвижимости «Твой Дом» в Новосибирске. Покупка и продажа квартир под ключ. 10+ лет опыта, 1000+ сделок.">
-    <meta name="keywords" content="недвижимость Новосибирск, купить квартиру, продать квартиру, риелтор, ипотека">
     <title>АН «Твой Дом» — Недвижимость в Новосибирске | 1000+ сделок</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -50,27 +49,21 @@
             line-height: 1.6;
             background: var(--bg);
             -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
         }
         
         .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
         
-        /* HEADER */
         header {
             position: fixed; top: 0; left: 0; right: 0;
             background: rgba(250, 249, 247, 0.98);
             backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
             border-bottom: 2px solid var(--border);
-            z-index: 1000; transition: all 0.3s ease;
+            z-index: 1000;
         }
         .header-content { display: flex; align-items: center; justify-content: space-between; height: 72px; }
-        .logo { 
-            font-size: 18px; font-weight: 800; color: var(--primary); text-decoration: none; 
-            display: flex; align-items: center; gap: 8px; letter-spacing: -0.5px; 
-        }
+        .logo { font-size: 18px; font-weight: 800; color: var(--primary); text-decoration: none; display: flex; align-items: center; gap: 8px; }
         nav { display: flex; gap: 24px; }
-        nav a { color: var(--text); text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.2s; }
+        nav a { color: var(--text); text-decoration: none; font-size: 14px; font-weight: 500; }
         nav a:hover { color: var(--accent); }
         .header-right { display: flex; align-items: center; gap: 12px; }
         .phone { color: var(--primary); text-decoration: none; font-weight: 700; font-size: 13px; }
@@ -83,300 +76,222 @@
         .btn-primary { 
             background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%); 
             color: var(--primary-dark);
-            box-shadow: 0 2px 4px rgba(201, 176, 55, 0.3);
         }
-        .btn-primary:hover { 
-            transform: translateY(-1px); 
-            box-shadow: 0 4px 12px rgba(201, 176, 55, 0.4);
-        }
+        .btn-primary:hover { transform: translateY(-1px); box-shadow: var(--shadow-lg); }
         .btn-secondary { background: transparent; color: var(--primary); border: 2px solid var(--primary); }
         .btn-secondary:hover { background: var(--primary); color: white; }
         
         .burger { display: none; flex-direction: column; gap: 4px; cursor: pointer; padding: 8px; }
-        .burger span { width: 24px; height: 2px; background: var(--primary); transition: all 0.3s; }
+        .burger span { width: 24px; height: 2px; background: var(--primary); }
         
-        /* HERO */
         .hero { margin-top: 72px; padding: 80px 0; background: linear-gradient(135deg, var(--bg) 0%, var(--bg-light) 100%); }
         .hero-content { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
         .hero-badge { 
-            display: inline-block; 
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); 
-            color: white; padding: 8px 20px; border-radius: 24px; font-size: 13px; font-weight: 700; 
-            margin-bottom: 24px; letter-spacing: 0.5px;
+            display: inline-block; background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); 
+            color: white; padding: 8px 20px; border-radius: 24px; font-size: 13px; font-weight: 700; margin-bottom: 24px;
         }
-        .hero h1 { font-size: 44px; font-weight: 800; line-height: 1.2; margin-bottom: 24px; color: var(--primary); letter-spacing: -1px; }
+        .hero h1 { font-size: 44px; font-weight: 800; line-height: 1.2; margin-bottom: 24px; color: var(--primary); }
         .hero-subtitle { font-size: 18px; color: var(--text-light); margin-bottom: 32px; line-height: 1.7; }
         .hero-buttons { display: flex; gap: 16px; margin-bottom: 40px; flex-wrap: wrap; }
         .hero-trust { display: flex; gap: 32px; padding-top: 32px; border-top: 1px solid var(--border); flex-wrap: wrap; }
         .trust-item { display: flex; align-items: center; gap: 12px; }
         .trust-icon { 
-            width: 44px; height: 44px; 
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); 
-            border-radius: 10px; display: flex; align-items: center; justify-content: center; 
-            box-shadow: var(--shadow);
+            width: 44px; height: 44px; background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); 
+            border-radius: 10px; display: flex; align-items: center; justify-content: center; box-shadow: var(--shadow);
         }
         .trust-icon svg { stroke: var(--accent); }
         .trust-text { font-size: 13px; color: var(--text-light); }
         .trust-text strong { display: block; color: var(--primary); font-size: 15px; font-weight: 700; }
         
-        .hero-image, .expert-photo {
-            position: relative; border-radius: 16px; overflow: hidden;
-            box-shadow: var(--shadow-lg); aspect-ratio: 4/3;
-            max-width: 450px; width: 100%;
+        .hero-image {
+            position: relative; border-radius: 16px; overflow: hidden; box-shadow: var(--shadow-lg);
+            aspect-ratio: 4/3; max-width: 450px; width: 100%;
             background: linear-gradient(135deg, #e8e4de 0%, #d4cfc7 100%);
         }
-        .expert-photo { aspect-ratio: 3/4; }
-        .hero-image img, .expert-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+        .hero-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
         .image-placeholder { 
-            width: 100%; height: 100%; 
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); 
+            width: 100%; height: 100%; background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); 
             display: flex; align-items: center; justify-content: center; color: white; 
         }
         
-        /* STATS */
         .stats { padding: 80px 0; background: var(--card-bg); }
         .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
         .stat-card { 
-            text-align: center; padding: 32px 24px; 
-            background: var(--bg-light); 
-            border-radius: 12px; 
-            border-top: 3px solid var(--accent);
-            transition: all 0.3s; 
+            text-align: center; padding: 32px 24px; background: var(--bg-light); border-radius: 12px; 
+            border-top: 3px solid var(--accent); transition: all 0.3s; 
         }
         .stat-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
-        .stat-number { 
-            font-size: 48px; font-weight: 800; 
-            color: var(--primary); 
-            margin-bottom: 8px;
-            display: block;
-        }
+        .stat-number { font-size: 48px; font-weight: 800; color: var(--primary); margin-bottom: 8px; display: block; }
         .stat-label { font-size: 14px; color: var(--text-light); font-weight: 500; }
         
-        /* SERVICES */
         .services { padding: 80px 0; background: var(--bg-light); }
-        .section-title { text-align: center; font-size: 40px; font-weight: 800; margin-bottom: 16px; color: var(--primary); letter-spacing: -1px; }
+        .section-title { text-align: center; font-size: 40px; font-weight: 800; margin-bottom: 16px; color: var(--primary); }
         .section-subtitle { text-align: center; font-size: 17px; color: var(--text-light); margin-bottom: 64px; }
         .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
         .service-card { 
-            background: var(--card-bg); padding: 36px 32px; border-radius: 12px; 
-            box-shadow: var(--shadow); transition: all 0.3s;
-            border-bottom: 3px solid transparent;
+            background: var(--card-bg); padding: 36px 32px; border-radius: 12px; box-shadow: var(--shadow); 
+            transition: all 0.3s; border-bottom: 3px solid transparent;
         }
-        .service-card:hover { 
-            transform: translateY(-6px); 
-            box-shadow: var(--shadow-lg);
-            border-bottom-color: var(--accent);
-        }
+        .service-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); border-bottom-color: var(--accent); }
         .service-icon { 
-            width: 60px; height: 60px; 
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); 
-            border-radius: 12px; display: flex; align-items: center; justify-content: center; 
-            margin-bottom: 24px;
+            width: 60px; height: 60px; background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); 
+            border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 24px;
         }
         .service-icon svg { stroke: var(--accent); }
         .service-card h3 { font-size: 20px; font-weight: 700; margin-bottom: 12px; color: var(--primary); }
         .service-card p { color: var(--text-light); margin-bottom: 16px; line-height: 1.6; }
         .service-price { font-size: 17px; font-weight: 700; color: var(--accent); }
         
-        /* CALCULATOR */
         .calculator { padding: 80px 0; background: var(--card-bg); }
         .calc-container { 
-            max-width: 850px; margin: 0 auto; 
-            background: var(--bg-light); 
-            padding: 48px; border-radius: 16px; 
-            box-shadow: var(--shadow-lg);
-            border: 1px solid var(--border);
+            max-width: 850px; margin: 0 auto; background: var(--bg-light); padding: 48px; 
+            border-radius: 16px; box-shadow: var(--shadow-lg); border: 1px solid var(--border);
         }
         .calc-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; margin-bottom: 32px; }
         .calc-group label { display: block; font-size: 14px; font-weight: 600; color: var(--primary); margin-bottom: 8px; }
         .calc-group input { 
-            width: 100%; padding: 14px 16px; border: 2px solid var(--border); 
-            border-radius: 8px; font-size: 16px; font-family: inherit; 
-            transition: all 0.2s; background: var(--card-bg); color: var(--text);
+            width: 100%; padding: 14px 16px; border: 2px solid var(--border); border-radius: 8px; 
+            font-size: 16px; font-family: inherit; background: var(--card-bg); color: var(--text);
         }
-        .calc-group input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(201, 176, 55, 0.1); }
+        .calc-group input:focus { outline: none; border-color: var(--accent); }
         .calc-result { 
             background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); 
             color: white; padding: 36px; border-radius: 12px; text-align: center;
-            box-shadow: 0 10px 30px rgba(45, 55, 72, 0.3);
         }
         .calc-result-label { font-size: 15px; opacity: 0.9; margin-bottom: 12px; font-weight: 500; }
         .calc-result-value { font-size: 48px; font-weight: 800; color: var(--accent-light); }
-        .calc-result-note { font-size: 13px; opacity: 0.75; margin-top: 16px; line-height: 1.5; }
+        .calc-result-note { font-size: 13px; opacity: 0.75; margin-top: 16px; }
         
-        /* WHY US */
         .why-us { padding: 80px 0; background: var(--bg); }
         .why-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
         .why-card { 
-            display: flex; gap: 24px; padding: 32px; 
-            background: var(--card-bg); border-radius: 12px; 
-            transition: all 0.3s;
-            border-left: 4px solid var(--accent);
+            display: flex; gap: 24px; padding: 32px; background: var(--card-bg); border-radius: 12px; 
+            transition: all 0.3s; border-left: 4px solid var(--accent);
         }
         .why-card:hover { box-shadow: var(--shadow-lg); transform: translateX(4px); }
         .why-icon { 
-            flex-shrink: 0; width: 52px; height: 52px; 
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); 
+            width: 52px; height: 52px; background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); 
             border-radius: 10px; display: flex; align-items: center; justify-content: center;
         }
         .why-icon svg { stroke: var(--accent); }
         .why-card h3 { font-size: 18px; font-weight: 700; margin-bottom: 8px; color: var(--primary); }
         .why-card p { color: var(--text-light); font-size: 15px; line-height: 1.6; }
         
-        /* EXPERT */
         .expert { padding: 80px 0; background: var(--card-bg); }
         .expert-content { display: grid; grid-template-columns: 1fr 2fr; gap: 64px; align-items: center; }
+        .expert-photo {
+            position: relative; border-radius: 16px; overflow: hidden; box-shadow: var(--shadow-lg);
+            aspect-ratio: 3/4; max-width: 350px; width: 100%;
+            background: linear-gradient(135deg, #e8e4de 0%, #d4cfc7 100%);
+        }
+        .expert-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
         .expert-info h2 { font-size: 36px; font-weight: 800; margin-bottom: 8px; color: var(--primary); }
-        .expert-title { font-size: 17px; color: var(--accent); font-weight: 700; margin-bottom: 24px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .expert-title { font-size: 17px; color: var(--accent); font-weight: 700; margin-bottom: 24px; text-transform: uppercase; }
         .expert-bio { font-size: 16px; color: var(--text-light); margin-bottom: 32px; line-height: 1.8; }
         .expert-achievements { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
         .achievement { 
             display: flex; align-items: center; gap: 12px; padding: 16px 20px; 
-            background: var(--bg-light); border-radius: 10px;
-            border-left: 3px solid var(--accent);
+            background: var(--bg-light); border-radius: 10px; border-left: 3px solid var(--accent);
         }
         .achievement svg { stroke: var(--accent); }
         .achievement span { font-weight: 600; color: var(--primary); font-size: 14px; }
         
-        /* REVIEWS */
         .reviews { padding: 80px 0; background: var(--bg-light); }
         .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
         .review-card { 
             background: var(--card-bg); padding: 36px; border-radius: 12px; 
-            box-shadow: var(--shadow);
-            border-top: 4px solid var(--accent);
+            box-shadow: var(--shadow); border-top: 4px solid var(--accent);
         }
         .review-stars { color: var(--accent-light); margin-bottom: 20px; font-size: 20px; letter-spacing: 2px; }
         .review-text { color: var(--text); margin-bottom: 24px; line-height: 1.7; font-style: italic; font-size: 15px; }
         .review-author { display: flex; align-items: center; gap: 14px; }
         .review-avatar { 
-            width: 50px; height: 50px; 
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); 
+            width: 50px; height: 50px; background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); 
             border-radius: 50%; display: flex; align-items: center; justify-content: center; 
             color: var(--accent); font-weight: 800; font-size: 18px;
         }
         .review-name { font-weight: 700; color: var(--primary); font-size: 15px; }
         .review-date { font-size: 13px; color: var(--text-light); }
         
-        /* FAQ */
         .faq { padding: 80px 0; background: var(--card-bg); }
         .faq-list { max-width: 850px; margin: 0 auto; }
         .faq-item { border-bottom: 1px solid var(--border); padding: 24px 0; }
         .faq-question { 
-            display: flex; justify-content: space-between; align-items: center; 
-            cursor: pointer; font-size: 17px; font-weight: 700; color: var(--primary);
+            display: flex; justify-content: space-between; align-items: center; cursor: pointer; 
+            font-size: 17px; font-weight: 700; color: var(--primary);
         }
         .faq-toggle { 
-            width: 36px; height: 36px; background: var(--bg-light); 
-            border-radius: 50%; display: flex; align-items: center; justify-content: center; 
-            transition: all 0.3s; font-size: 20px; color: var(--accent);
+            width: 36px; height: 36px; background: var(--bg-light); border-radius: 50%; 
+            display: flex; align-items: center; justify-content: center; font-size: 20px; color: var(--accent);
         }
         .faq-item.active .faq-toggle { background: var(--primary); color: white; transform: rotate(45deg); }
-        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; color: var(--text-light); line-height: 1.7; font-size: 15px; }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; color: var(--text-light); line-height: 1.7; }
         .faq-item.active .faq-answer { max-height: 500px; padding-top: 16px; }
         
-        /* CONTACT */
         .contact { 
-            padding: 60px 0; 
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); 
-            color: white;
-            position: relative;
-            overflow: hidden;
+            padding: 60px 0; background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); 
+            color: white; position: relative; overflow: hidden;
         }
         .contact::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -20%;
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(201, 176, 55, 0.1) 0%, transparent 70%);
-            pointer-events: none;
+            content: ''; position: absolute; top: -50%; right: -20%; width: 600px; height: 600px;
+            background: radial-gradient(circle, rgba(201, 176, 55, 0.1) 0%, transparent 70%); pointer-events: none;
         }
         .contact-content { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: flex-start; position: relative; z-index: 1; }
         .contact-info h2 { font-size: 32px; font-weight: 800; margin-bottom: 16px; }
         .contact-info p { font-size: 16px; margin-bottom: 24px; opacity: 0.95; line-height: 1.5; }
         
-        .contact-columns { 
-            display: grid; 
-            grid-template-columns: 1fr 1fr; 
-            gap: 32px;
-            margin-bottom: 24px;
-        }
+        .contact-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-bottom: 24px; }
         .contact-section-title { 
-            font-size: 14px; 
-            font-weight: 700; 
-            color: var(--accent-light); 
-            margin-bottom: 12px; 
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+            font-size: 14px; font-weight: 700; color: var(--accent-light); margin-bottom: 12px; 
+            text-transform: uppercase; letter-spacing: 0.5px;
         }
         .contact-methods { display: flex; flex-direction: column; gap: 10px; }
         .contact-method { 
             display: flex; align-items: center; gap: 10px; padding: 10px 12px; 
-            background: rgba(255, 255, 255, 0.1); 
-            border-radius: 6px; text-decoration: none; color: white; 
-            transition: all 0.2s;
-            border: 1px solid rgba(255, 255, 255, 0.15);
+            background: rgba(255, 255, 255, 0.1); border-radius: 6px; text-decoration: none; color: white; 
+            transition: all 0.2s; border: 1px solid rgba(255, 255, 255, 0.15);
         }
-        .contact-method:hover { 
-            background: rgba(255, 255, 255, 0.18); 
-            transform: translateX(2px);
-        }
+        .contact-method:hover { background: rgba(255, 255, 255, 0.18); transform: translateX(2px); }
         .contact-method svg { stroke: var(--accent-light); flex-shrink: 0; width: 16px; height: 16px; }
         .contact-method strong { display: block; font-size: 11px; font-weight: 700; opacity: 0.85; }
         .contact-method div div:last-child { font-size: 13px; font-weight: 600; }
         
-        .contact-form { 
-            background: var(--card-bg); padding: 32px; border-radius: 12px; 
-            box-shadow: var(--shadow-lg);
-        }
+        .contact-form { background: var(--card-bg); padding: 32px; border-radius: 12px; box-shadow: var(--shadow-lg); }
         .form-group { margin-bottom: 16px; }
         .form-group label { display: block; margin-bottom: 6px; font-weight: 600; color: var(--primary); font-size: 13px; }
         .form-group input, .form-group select { 
-            width: 100%; padding: 11px 14px; border: 2px solid var(--border); 
-            border-radius: 6px; font-size: 14px; font-family: inherit; 
-            transition: all 0.2s; background: var(--bg); color: var(--text);
+            width: 100%; padding: 11px 14px; border: 2px solid var(--border); border-radius: 6px; 
+            font-size: 14px; font-family: inherit; background: var(--bg); color: var(--text);
         }
-        .form-group input:focus, .form-group select:focus { 
-            outline: none; border-color: var(--accent); 
-            box-shadow: 0 0 0 3px rgba(201, 176, 55, 0.1);
-        }
+        .form-group input:focus, .form-group select:focus { outline: none; border-color: var(--accent); }
         .checkbox-group { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 20px; }
         .checkbox-group input { margin-top: 3px; accent-color: var(--accent); }
         .checkbox-group label { font-size: 12px; color: var(--text-light); line-height: 1.4; }
         .btn-submit { width: 100%; padding: 13px; font-size: 14px; font-weight: 700; }
         
-        /* FOOTER */
-        footer { 
-            background: var(--primary-dark); color: white; padding: 48px 0 24px;
-            border-top: 3px solid var(--accent);
-        }
+        footer { background: var(--primary-dark); color: white; padding: 48px 0 24px; border-top: 3px solid var(--accent); }
         .footer-content { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 48px; margin-bottom: 32px; }
-        .footer-logo { font-size: 24px; font-weight: 800; margin-bottom: 12px; letter-spacing: -0.5px; color: var(--accent-light); }
+        .footer-logo { font-size: 24px; font-weight: 800; margin-bottom: 12px; color: var(--accent-light); }
         .footer-description { color: rgba(255, 255, 255, 0.7); margin-bottom: 20px; line-height: 1.6; font-size: 14px; }
         .footer-section h4 { margin-bottom: 16px; font-size: 15px; color: var(--accent-light); font-weight: 700; }
         .footer-section ul { list-style: none; }
         .footer-section li { margin-bottom: 10px; }
-        .footer-section a { color: rgba(255, 255, 255, 0.75); text-decoration: none; transition: color 0.2s; font-size: 14px; }
+        .footer-section a { color: rgba(255, 255, 255, 0.75); text-decoration: none; font-size: 14px; }
         .footer-section a:hover { color: var(--accent-light); }
         .footer-bottom { 
             padding-top: 24px; border-top: 1px solid rgba(255, 255, 255, 0.1); 
             text-align: center; color: rgba(255, 255, 255, 0.5); font-size: 13px; 
         }
         
-        /* FAB */
         .fab { 
-            position: fixed; bottom: 28px; right: 28px; 
-            width: 56px; height: 56px; 
+            position: fixed; bottom: 28px; right: 28px; width: 56px; height: 56px; 
             background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%); 
             border-radius: 50%; display: flex; align-items: center; justify-content: center; 
             box-shadow: 0 10px 30px rgba(201, 176, 55, 0.4);
             cursor: pointer; transition: all 0.3s; z-index: 999; text-decoration: none; color: var(--primary-dark);
         }
-        .fab:hover { transform: scale(1.1) translateY(-4px); box-shadow: 0 15px 40px rgba(201, 176, 55, 0.5); }
+        .fab:hover { transform: scale(1.1) translateY(-4px); }
         
-        /* MOBILE */
         @media (max-width: 1024px) {
             nav { display: none; }
             .burger { display: flex; }
@@ -430,14 +345,14 @@
     <header>
         <div class="container">
             <div class="header-content">
-                <a href="#" class="logo" aria-label="АН Твой Дом - главная страница">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                <a href="#" class="logo">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                         <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
                         <polyline points="9 22 9 12 15 12 15 22"></polyline>
                     </svg>
                     Твой Дом
                 </a>
-                <nav aria-label="Главная навигация">
+                <nav>
                     <a href="#services">Услуги</a>
                     <a href="#calculator">Калькулятор</a>
                     <a href="#why">Преимущества</a>
@@ -445,9 +360,9 @@
                     <a href="#contact">Контакты</a>
                 </nav>
                 <div class="header-right">
-                    <a href="tel:+79529358502" class="phone" aria-label="Позвонить Наталье">+7 (952) 935-85-02</a>
+                    <a href="tel:+79529358502" class="phone">+7 (952) 935-85-02</a>
                     <a href="#contact" class="btn btn-primary">Консультация</a>
-                    <button class="burger" onclick="toggleMenu()" aria-label="Открыть меню" aria-expanded="false">
+                    <button class="burger" onclick="toggleMenu()" aria-label="Меню">
                         <span></span><span></span><span></span>
                     </button>
                 </div>
@@ -477,7 +392,7 @@
                     <div class="hero-trust">
                         <div class="trust-item">
                             <div class="trust-icon">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
                                 </svg>
                             </div>
@@ -485,7 +400,7 @@
                         </div>
                         <div class="trust-item">
                             <div class="trust-icon">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <circle cx="12" cy="12" r="10"></circle>
                                     <polyline points="12 6 12 12 16 14"></polyline>
                                 </svg>
@@ -495,10 +410,7 @@
                     </div>
                 </div>
                 <div class="hero-image">
-                    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=400&q=80" 
-                         alt="Счастливая семья с ключами от новой квартиры" 
-                         loading="lazy"
-                         onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'image-placeholder\'><svg width=\'80\' height=\'80\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1.5\' aria-hidden=\'true\'><path d=\'M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z\'></path><polyline points=\'9 22 9 12 15 12 15 22\'></polyline></svg></div>'">
+                    <img src="https://cdn.pixabay.com/photo/2016/11/18/17/46/living-room-1835923_1280.jpg" alt="Квартира с ключами" loading="lazy">
                 </div>
             </div>
         </div>
@@ -522,7 +434,7 @@
             <div class="services-grid">
                 <div class="service-card fade-in">
                     <div class="service-icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <circle cx="11" cy="11" r="8"></circle>
                             <path d="m21 21-4.35-4.35"></path>
                         </svg>
@@ -533,7 +445,7 @@
                 </div>
                 <div class="service-card fade-in">
                     <div class="service-icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
                             <polyline points="14 2 14 8 20 8"></polyline>
                             <line x1="16" y1="13" x2="8" y2="13"></line>
@@ -546,7 +458,7 @@
                 </div>
                 <div class="service-card fade-in">
                     <div class="service-icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <line x1="12" y1="1" x2="12" y2="23"></line>
                             <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
                         </svg>
@@ -568,25 +480,25 @@
                 <div class="calc-grid">
                     <div class="calc-group">
                         <label for="calc-price">Стоимость недвижимости, ₽</label>
-                        <input type="number" id="calc-price" value="5000000" min="1000000" step="100000" aria-label="Стоимость недвижимости">
+                        <input type="number" id="calc-price" value="5000000" min="1000000" step="100000">
                     </div>
                     <div class="calc-group">
                         <label for="calc-down">Первоначальный взнос, %</label>
-                        <input type="number" id="calc-down" value="20" min="0" max="90" step="5" aria-label="Первоначальный взнос">
+                        <input type="number" id="calc-down" value="20" min="0" max="90" step="5">
                     </div>
                     <div class="calc-group">
                         <label for="calc-rate">Процентная ставка, % годовых</label>
-                        <input type="number" id="calc-rate" value="16" min="1" max="30" step="0.1" aria-label="Процентная ставка">
+                        <input type="number" id="calc-rate" value="16" min="1" max="30" step="0.1">
                     </div>
                     <div class="calc-group">
                         <label for="calc-years">Срок кредита, лет</label>
-                        <input type="number" id="calc-years" value="20" min="1" max="30" step="1" aria-label="Срок кредита">
+                        <input type="number" id="calc-years" value="20" min="1" max="30" step="1">
                     </div>
                 </div>
                 <div class="calc-result">
                     <div class="calc-result-label">Ежемесячный платеж</div>
                     <div class="calc-result-value" id="calc-payment">0 ₽</div>
-                    <div class="calc-result-note">*Расчет является предварительным. Для точного расчета и одобрения ипотеки оставьте заявку на консультацию.</div>
+                    <div class="calc-result-note">*Расчет является предварительным. Для точного расчета оставьте заявку на консультацию.</div>
                 </div>
             </div>
         </div>
@@ -599,7 +511,7 @@
             <div class="why-grid">
                 <div class="why-card fade-in">
                     <div class="why-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
                         </svg>
                     </div>
@@ -607,7 +519,7 @@
                 </div>
                 <div class="why-card fade-in">
                     <div class="why-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <circle cx="12" cy="12" r="10"></circle>
                             <polyline points="12 6 12 12 16 14"></polyline>
                         </svg>
@@ -616,7 +528,7 @@
                 </div>
                 <div class="why-card fade-in">
                     <div class="why-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
                             <circle cx="9" cy="7" r="4"></circle>
                             <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
@@ -627,7 +539,7 @@
                 </div>
                 <div class="why-card fade-in">
                     <div class="why-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <polyline points="20 6 9 17 4 12"></polyline>
                         </svg>
                     </div>
@@ -641,10 +553,7 @@
         <div class="container">
             <div class="expert-content">
                 <div class="expert-photo">
-                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80" 
-                         alt="Наталья - ведущий эксперт АН Твой Дом" 
-                         loading="lazy"
-                         onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'image-placeholder\'><svg width=\'80\' height=\'80\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1.5\' aria-hidden=\'true\'><path d=\'M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2\'></path><circle cx=\'12\' cy=\'7\' r=\'4\'></circle></svg></div>'">
+                    <img src="https://cdn.pixabay.com/photo/2015/01/08/18/24/ceo-593616_1280.jpg" alt="Наталья - ведущий эксперт" loading="lazy">
                 </div>
                 <div class="expert-info">
                     <h2>Наталья</h2>
@@ -652,28 +561,28 @@
                     <p class="expert-bio">За 10 лет работы провела более 1000 успешных сделок с недвижимостью в Новосибирске. Специализируется на покупке и продаже квартир в новостройках и на вторичном рынке. Каждую сделку сопровождает лично — от первого звонка до получения ключей.</p>
                     <div class="expert-achievements">
                         <div class="achievement">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <circle cx="12" cy="8" r="7"></circle>
                                 <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
                             </svg>
                             <span>Лучший риелтор АН ЦАН</span>
                         </div>
                         <div class="achievement">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
                                 <polyline points="14 2 14 8 20 8"></polyline>
                             </svg>
                             <span>1000+ успешных сделок</span>
                         </div>
                         <div class="achievement">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <circle cx="12" cy="12" r="10"></circle>
                                 <polyline points="12 6 12 12 16 14"></polyline>
                             </svg>
                             <span>Работает с 2013 года</span>
                         </div>
                         <div class="achievement">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
                                 <polyline points="22 4 12 14.01 9 11.01"></polyline>
                             </svg>
@@ -691,26 +600,26 @@
             <p class="section-subtitle">Реальные отзывы людей, которые уже работали с нами</p>
             <div class="reviews-grid">
                 <div class="review-card fade-in">
-                    <div class="review-stars" aria-label="5 звезд">★★★★★</div>
+                    <div class="review-stars">★★★★★</div>
                     <p class="review-text">"Огромное спасибо Наталье и агентству «Твой Дом» за помощь в поиске жилья и полном оформлении сделки. Остались только положительные эмоции! Смело рекомендую!"</p>
                     <div class="review-author">
-                        <div class="review-avatar" aria-hidden="true">А</div>
+                        <div class="review-avatar">А</div>
                         <div><div class="review-name">Алексей М.</div><div class="review-date">2ГИС, 2024</div></div>
                     </div>
                 </div>
                 <div class="review-card fade-in">
-                    <div class="review-stars" aria-label="5 звезд">★★★★★</div>
+                    <div class="review-stars">★★★★★</div>
                     <p class="review-text">"Наталья помогла купить квартиру в новостройке через агентство. Все прошло быстро и без нервов. Особенно порадовала помощь с ипотекой — одобрили с первого раза!"</p>
                     <div class="review-author">
-                        <div class="review-avatar" aria-hidden="true">Е</div>
+                        <div class="review-avatar">Е</div>
                         <div><div class="review-name">Елена К.</div><div class="review-date">2ГИС, 2024</div></div>
                     </div>
                 </div>
                 <div class="review-card fade-in">
-                    <div class="review-stars" aria-label="5 звезд">★★★★★</div>
+                    <div class="review-stars">★★★★★</div>
                     <p class="review-text">"Продали квартиру за 3 недели по цене выше рыночной. Наталья — профессионал своего дела. Все документы подготовила идеально, сделка прошла гладко."</p>
                     <div class="review-author">
-                        <div class="review-avatar" aria-hidden="true">Д</div>
+                        <div class="review-avatar">Д</div>
                         <div><div class="review-name">Дмитрий В.</div><div class="review-date">2ГИС, 2024</div></div>
                     </div>
                 </div>
@@ -723,27 +632,27 @@
             <h2 class="section-title">Частые вопросы</h2>
             <div class="faq-list">
                 <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFaq(this)" role="button" tabindex="0" aria-expanded="false">
+                    <div class="faq-question" onclick="toggleFaq(this)">
                         <span>Сколько стоят услуги агентства?</span>
-                        <div class="faq-toggle" aria-hidden="true">+</div>
+                        <div class="faq-toggle">+</div>
                     </div>
                     <div class="faq-answer">
                         <p>По новостройкам комиссия 0%. По вторичному рынку стоимость сопровождения обсуждается индивидуально. Первая консультация всегда бесплатна.</p>
                     </div>
                 </div>
                 <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFaq(this)" role="button" tabindex="0" aria-expanded="false">
+                    <div class="faq-question" onclick="toggleFaq(this)">
                         <span>Как происходит проверка юридической чистоты?</span>
-                        <div class="faq-toggle" aria-hidden="true">+</div>
+                        <div class="faq-toggle">+</div>
                     </div>
                     <div class="faq-answer">
                         <p>Мы проверяем все документы на объект, историю переходов права собственности, наличие обременений, арестов, залогов. Вы получаете полный отчет о рисках.</p>
                     </div>
                 </div>
                 <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFaq(this)" role="button" tabindex="0" aria-expanded="false">
+                    <div class="faq-question" onclick="toggleFaq(this)">
                         <span>Помогаете ли вы с ипотекой?</span>
-                        <div class="faq-toggle" aria-hidden="true">+</div>
+                        <div class="faq-toggle">+</div>
                     </div>
                     <div class="faq-answer">
                         <p>Да, в штате агентства работает ипотечный брокер, который подберет лучшие условия ипотеки среди всех банков. Помогаем даже в сложных ситуациях.</p>
@@ -761,30 +670,29 @@
                     <p>Обсудим вашу ситуацию и подберем оптимальное решение</p>
                     
                     <div class="contact-columns">
-                        <!-- Наталья -->
                         <div>
                             <div class="contact-section-title">Наталья</div>
                             <div class="contact-methods">
-                                <a href="tel:+79529358502" class="contact-method" aria-label="Позвонить Наталье">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <a href="tel:+79529358502" class="contact-method">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                         <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
                                     </svg>
                                     <div><strong>Телефон</strong><div>+7 (952) 935-85-02</div></div>
                                 </a>
-                                <a href="https://wa.me/79529358502" class="contact-method" target="_blank" aria-label="Написать Наталье в WhatsApp">
-                                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <a href="https://wa.me/79529358502" class="contact-method" target="_blank">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
                                         <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
                                     </svg>
                                     <div><strong>WhatsApp</strong><div>Написать</div></div>
                                 </a>
-                                <a href="https://t.me/+79529358502" class="contact-method" target="_blank" aria-label="Написать Наталье в Telegram">
-                                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <a href="https://t.me/+79529358502" class="contact-method" target="_blank">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
                                         <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
                                     </svg>
                                     <div><strong>Telegram</strong><div>Написать</div></div>
                                 </a>
-                                <a href="https://max.ru/79529358502" class="contact-method" target="_blank" aria-label="Написать Наталье в Max">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <a href="https://max.ru/79529358502" class="contact-method" target="_blank">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                         <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                                         <polyline points="22,6 12,13 2,6"></polyline>
                                     </svg>
@@ -793,24 +701,23 @@
                             </div>
                         </div>
                         
-                        <!-- Сергей -->
                         <div>
                             <div class="contact-section-title">Сергей</div>
                             <div class="contact-methods">
-                                <a href="tel:+79529358508" class="contact-method" aria-label="Позвонить Сергею">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <a href="tel:+79529358508" class="contact-method">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                         <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
                                     </svg>
                                     <div><strong>Телефон</strong><div>+7 (952) 935-85-08</div></div>
                                 </a>
-                                <a href="https://wa.me/79529358508" class="contact-method" target="_blank" aria-label="Написать Сергею в WhatsApp">
-                                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <a href="https://wa.me/79529358508" class="contact-method" target="_blank">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
                                         <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
                                     </svg>
                                     <div><strong>WhatsApp</strong><div>Написать</div></div>
                                 </a>
-                                <a href="https://t.me/+79529358508" class="contact-method" target="_blank" aria-label="Написать Сергею в Telegram">
-                                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <a href="https://t.me/+79529358508" class="contact-method" target="_blank">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
                                         <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
                                     </svg>
                                     <div><strong>Telegram</strong><div>Написать</div></div>
@@ -819,10 +726,9 @@
                         </div>
                     </div>
                     
-                    <!-- Email -->
                     <div class="contact-section-title">Email</div>
-                    <a href="mailto:tvoydom15@mail.ru" class="contact-method" style="display: inline-flex; max-width: 300px;" aria-label="Написать на email">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <a href="mailto:tvoydom15@mail.ru" class="contact-method" style="display: inline-flex; max-width: 300px;">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                             <polyline points="22,6 12,13 2,6"></polyline>
                         </svg>
@@ -831,18 +737,18 @@
                 </div>
                 
                 <div class="contact-form">
-                 <form id="contactForm" action="https://formsubmit.co/websergio@mail.ru" method="POST">
+                    <form id="contactForm" action="https://formsubmit.co/websergio@mail.ru" method="POST">
                         <input type="hidden" name="_subject" value="Новая заявка с лендинга АН Твой Дом">
                         <input type="hidden" name="_captcha" value="false">
                         <input type="hidden" name="_template" value="table">
                         
                         <div class="form-group">
                             <label for="name">Ваше имя</label>
-                            <input type="text" id="name" name="name" required placeholder="Как к вам обращаться?" aria-required="true">
+                            <input type="text" id="name" name="name" required placeholder="Как к вам обращаться?">
                         </div>
                         <div class="form-group">
                             <label for="phone">Телефон</label>
-                            <input type="tel" id="phone" name="phone" required placeholder="+7 (___) ___-__-__" aria-required="true">
+                            <input type="tel" id="phone" name="phone" required placeholder="+7 (___) ___-__-__">
                         </div>
                         <div class="form-group">
                             <label for="service">Что вас интересует?</label>
@@ -854,7 +760,7 @@
                             </select>
                         </div>
                         <div class="checkbox-group">
-                            <input type="checkbox" id="agree" name="agree" required aria-required="true">
+                            <input type="checkbox" id="agree" name="agree" required>
                             <label for="agree">Я согласен на обработку персональных данных</label>
                         </div>
                         <button type="submit" class="btn btn-primary btn-submit" id="submitBtn">Записаться на консультацию</button>
@@ -896,8 +802,8 @@
         </div>
     </footer>
     
-    <a href="#contact" class="fab" title="Записаться на консультацию" aria-label="Записаться на консультацию">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+    <a href="#contact" class="fab" title="Записаться на консультацию">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
         </svg>
     </a>
@@ -905,16 +811,12 @@
     <script>
         function toggleMenu() { 
             const menu = document.getElementById('mobileMenu');
-            const burger = document.querySelector('.burger');
             menu.classList.toggle('active');
-            burger.setAttribute('aria-expanded', menu.classList.contains('active'));
         }
         
         function toggleFaq(element) { 
             const item = element.parentElement;
-            const isActive = item.classList.contains('active');
             item.classList.toggle('active');
-            element.setAttribute('aria-expanded', !isActive);
         }
         
         // Отправка формы
@@ -927,7 +829,10 @@
             btn.textContent = 'Отправка...';
             btn.disabled = true;
             
-            if (typeof ym !== 'undefined') { ym(109706741, 'reachGoal', 'form_submit'); }
+            // Отправка цели в Яндекс.Метрику
+            if (typeof ym !== 'undefined') { 
+                ym(109706741, 'reachGoal', 'form_submit'); 
+            }
             
             fetch(this.action, {
                 method: 'POST',
@@ -935,7 +840,7 @@
                 headers: { 'Accept': 'application/json' }
             }).then(response => {
                 if (response.ok) {
-                    status.textContent = 'Спасибо! Заявка успешно отправлена в агентство. Мы свяжемся с вами в ближайшее время.';
+                    status.textContent = 'Спасибо! Заявка успешно отправлена. Мы свяжемся с вами в ближайшее время.';
                     status.style.color = '#10b981';
                     status.style.display = 'block';
                     this.reset();
@@ -1025,14 +930,18 @@
         // Отслеживание кликов по телефону
         document.querySelectorAll('a[href^="tel:"]').forEach(link => {
             link.addEventListener('click', function() {
-                if (typeof ym !== 'undefined') { ym(109706741, 'reachGoal', 'phone_click'); }
+                if (typeof ym !== 'undefined') { 
+                    ym(109706741, 'reachGoal', 'phone_click'); 
+                }
             });
         });
         
-        // Отслеживание кликов по CTA кнопкам
+        // Отслеживание кликов по кнопкам
         document.querySelectorAll('.btn-primary').forEach(button => {
             button.addEventListener('click', function() {
-                if (typeof ym !== 'undefined') { ym(109706741, 'reachGoal', 'cta_click'); }
+                if (typeof ym !== 'undefined') { 
+                    ym(109706741, 'reachGoal', 'cta_click'); 
+                }
             });
         });
     </script>
