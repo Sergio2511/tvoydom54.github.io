@@ -4,20 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>АН «Твой Дом» — Недвижимость в Новосибирске</title>
-    
-    <!-- Yandex.Metrika counter -->
-    <script type="text/javascript">
-        (function(m,e,t,r,i,k,a){
-            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-            m[i].l=1*new Date();
-            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-        })(window, document,'script','https://mc.yandex.ru/metrika/tag.js', 'ym');
-
-        ym(109706741, 'init', {webvisor:true, clickmap:true, trackLinks:true, accurateTrackBounce:true});
-    </script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/109706741" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter -->
-    
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.6; color: #1a202c; background: #faf9f7; }
@@ -33,9 +19,8 @@
         .phone { color: #2d3748; text-decoration: none; font-weight: 700; font-size: 13px; }
         .btn { display: inline-flex; align-items: center; justify-content: center; padding: 10px 18px; border-radius: 6px; font-weight: 600; font-size: 13px; text-decoration: none; border: none; cursor: pointer; }
         .btn-primary { background: linear-gradient(135deg, #c9b037 0%, #d4af37 100%); color: #1a202c; }
-        .btn-primary:hover { transform: translateY(-1px); }
         .btn-secondary { background: transparent; color: #2d3748; border: 2px solid #2d3748; }
-        .burger { display: none; flex-direction: column; gap: 4px; cursor: pointer; padding: 8px; }
+        .burger { display: none; flex-direction: column; gap: 4px; cursor: pointer; padding: 8px; background: none; border: none; }
         .burger span { width: 24px; height: 2px; background: #2d3748; }
         
         .hero { margin-top: 72px; padding: 80px 0; background: linear-gradient(135deg, #faf9f7 0%, #f5f3f0 100%); }
@@ -46,12 +31,10 @@
         .hero-buttons { display: flex; gap: 16px; margin-bottom: 40px; flex-wrap: wrap; }
         .hero-trust { display: flex; gap: 32px; padding-top: 32px; border-top: 1px solid #e8e4de; flex-wrap: wrap; }
         .trust-item { display: flex; align-items: center; gap: 12px; }
-        .trust-icon { width: 44px; height: 44px; background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%); border-radius: 10px; display: flex; align-items: center; justify-content: center; }
-        .trust-icon svg { stroke: #c9b037; }
+        .trust-icon { width: 44px; height: 44px; background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: #c9b037; }
         .trust-text { font-size: 13px; color: #718096; }
         .trust-text strong { display: block; color: #2d3748; font-size: 15px; font-weight: 700; }
-        .hero-image { position: relative; border-radius: 16px; overflow: hidden; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15); aspect-ratio: 4/3; max-width: 450px; width: 100%; }
-        .hero-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
+        .hero-image { position: relative; border-radius: 16px; overflow: hidden; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15); aspect-ratio: 4/3; max-width: 450px; width: 100%; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 80px; }
         
         .stats { padding: 80px 0; background: white; }
         .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
@@ -65,8 +48,7 @@
         .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
         .service-card { background: white; padding: 36px 32px; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); border-bottom: 3px solid transparent; transition: all 0.3s; }
         .service-card:hover { transform: translateY(-6px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15); border-bottom-color: #c9b037; }
-        .service-icon { width: 60px; height: 60px; background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 24px; }
-        .service-icon svg { stroke: #c9b037; }
+        .service-icon { width: 60px; height: 60px; background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 24px; color: #c9b037; font-size: 28px; }
         .service-card h3 { font-size: 20px; font-weight: 700; margin-bottom: 12px; color: #2d3748; }
         .service-card p { color: #718096; margin-bottom: 16px; line-height: 1.6; }
         .service-price { font-size: 17px; font-weight: 700; color: #c9b037; }
@@ -86,21 +68,18 @@
         .why-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
         .why-card { display: flex; gap: 24px; padding: 32px; background: white; border-radius: 12px; border-left: 4px solid #c9b037; transition: all 0.3s; }
         .why-card:hover { box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15); transform: translateX(4px); }
-        .why-icon { flex-shrink: 0; width: 52px; height: 52px; background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%); border-radius: 10px; display: flex; align-items: center; justify-content: center; }
-        .why-icon svg { stroke: #c9b037; }
+        .why-icon { flex-shrink: 0; width: 52px; height: 52px; background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: #c9b037; font-size: 24px; }
         .why-card h3 { font-size: 18px; font-weight: 700; margin-bottom: 8px; color: #2d3748; }
         .why-card p { color: #718096; font-size: 15px; line-height: 1.6; }
         
         .expert { padding: 80px 0; background: white; }
         .expert-content { display: grid; grid-template-columns: 1fr 2fr; gap: 64px; align-items: center; }
-        .expert-photo { position: relative; border-radius: 16px; overflow: hidden; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15); aspect-ratio: 3/4; max-width: 350px; width: 100%; }
-        .expert-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+        .expert-photo { position: relative; border-radius: 16px; overflow: hidden; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15); aspect-ratio: 3/4; max-width: 350px; width: 100%; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 100px; }
         .expert-info h2 { font-size: 36px; font-weight: 800; margin-bottom: 8px; color: #2d3748; }
         .expert-title { font-size: 17px; color: #c9b037; font-weight: 700; margin-bottom: 24px; text-transform: uppercase; }
         .expert-bio { font-size: 16px; color: #718096; margin-bottom: 32px; line-height: 1.8; }
         .expert-achievements { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
         .achievement { display: flex; align-items: center; gap: 12px; padding: 16px 20px; background: #f5f3f0; border-radius: 10px; border-left: 3px solid #c9b037; }
-        .achievement svg { stroke: #c9b037; }
         .achievement span { font-weight: 600; color: #2d3748; font-size: 14px; }
         
         .reviews { padding: 80px 0; background: #f5f3f0; }
@@ -122,8 +101,8 @@
         .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; color: #718096; line-height: 1.7; }
         .faq-item.active .faq-answer { max-height: 500px; padding-top: 16px; }
         
-        .contact { padding: 60px 0; background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%); color: white; position: relative; overflow: hidden; }
-        .contact-content { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: flex-start; position: relative; z-index: 1; }
+        .contact { padding: 60px 0; background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%); color: white; }
+        .contact-content { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: flex-start; }
         .contact-info h2 { font-size: 32px; font-weight: 800; margin-bottom: 16px; }
         .contact-info p { font-size: 16px; margin-bottom: 24px; opacity: 0.95; line-height: 1.5; }
         .contact-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-bottom: 24px; }
@@ -131,7 +110,6 @@
         .contact-methods { display: flex; flex-direction: column; gap: 10px; }
         .contact-method { display: flex; align-items: center; gap: 10px; padding: 10px 12px; background: rgba(255, 255, 255, 0.1); border-radius: 6px; text-decoration: none; color: white; transition: all 0.2s; border: 1px solid rgba(255, 255, 255, 0.15); }
         .contact-method:hover { background: rgba(255, 255, 255, 0.18); transform: translateX(2px); }
-        .contact-method svg { stroke: #d4af37; flex-shrink: 0; width: 16px; height: 16px; }
         .contact-method strong { display: block; font-size: 11px; font-weight: 700; opacity: 0.85; }
         .contact-method div div:last-child { font-size: 13px; font-weight: 600; }
         .contact-form { background: white; padding: 32px; border-radius: 12px; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15); }
@@ -142,7 +120,10 @@
         .checkbox-group { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 20px; }
         .checkbox-group input { margin-top: 3px; accent-color: #c9b037; }
         .checkbox-group label { font-size: 12px; color: #718096; line-height: 1.4; }
-        .btn-submit { width: 100%; padding: 13px; font-size: 14px; font-weight: 700; }
+        .btn-submit { width: 100%; padding: 13px; font-size: 14px; font-weight: 700; border: none; cursor: pointer; }
+        .form-message { margin-top: 16px; padding: 12px; border-radius: 6px; text-align: center; display: none; }
+        .form-message.success { background: #c6f6d5; color: #22543d; display: block; }
+        .form-message.error { background: #fed7d7; color: #742a2a; display: block; }
         
         footer { background: #1a202c; color: white; padding: 48px 0 24px; border-top: 3px solid #c9b037; }
         .footer-content { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 48px; margin-bottom: 32px; }
@@ -155,7 +136,7 @@
         .footer-section a:hover { color: #d4af37; }
         .footer-bottom { padding-top: 24px; border-top: 1px solid rgba(255, 255, 255, 0.1); text-align: center; color: rgba(255, 255, 255, 0.5); font-size: 13px; }
         
-        .fab { position: fixed; bottom: 28px; right: 28px; width: 56px; height: 56px; background: linear-gradient(135deg, #c9b037 0%, #d4af37 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 30px rgba(201, 176, 55, 0.4); cursor: pointer; transition: all 0.3s; z-index: 999; text-decoration: none; color: #1a202c; }
+        .fab { position: fixed; bottom: 28px; right: 28px; width: 56px; height: 56px; background: linear-gradient(135deg, #c9b037 0%, #d4af37 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 30px rgba(201, 176, 55, 0.4); cursor: pointer; transition: all 0.3s; z-index: 999; text-decoration: none; color: #1a202c; font-size: 24px; }
         .fab:hover { transform: scale(1.1) translateY(-4px); }
         
         @media (max-width: 1024px) {
@@ -240,18 +221,16 @@
                     </div>
                     <div class="hero-trust">
                         <div class="trust-item">
-                            <div class="trust-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
+                            <div class="trust-icon">🛡️</div>
                             <div class="trust-text"><strong>Гарантия безопасности</strong>Проверка юридической чистоты</div>
                         </div>
                         <div class="trust-item">
-                            <div class="trust-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></div>
+                            <div class="trust-icon">⏰</div>
                             <div class="trust-text"><strong>Работаем с 2013 года</strong>10+ лет на рынке</div>
                         </div>
                     </div>
                 </div>
-                <div class="hero-image">
-                    <img src="https://cdn.pixabay.com/photo/2016/11/18/17/46/living-room-1835923_1280.jpg" alt="Квартира" loading="lazy">
-                </div>
+                <div class="hero-image">🏡</div>
             </div>
         </div>
     </section>
@@ -273,19 +252,19 @@
             <p class="section-subtitle">Полное сопровождение сделки от поиска квартиры до получения ключей</p>
             <div class="services-grid">
                 <div class="service-card fade-in">
-                    <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg></div>
+                    <div class="service-icon">🔍</div>
                     <h3>Подбор квартиры</h3>
                     <p>Найдем идеальный вариант под ваш бюджет и требования. Работа с новостройками и вторичным рынком.</p>
                     <div class="service-price">Бесплатно при покупке</div>
                 </div>
                 <div class="service-card fade-in">
-                    <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg></div>
+                    <div class="service-icon">📋</div>
                     <h3>Юридическая проверка</h3>
                     <p>Полная проверка юридической чистоты объекта. Защита от рисков и скрытых проблем.</p>
                     <div class="service-price">Входит в сопровождение</div>
                 </div>
                 <div class="service-card fade-in">
-                    <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg></div>
+                    <div class="service-icon">💰</div>
                     <h3>Помощь с ипотекой</h3>
                     <p>Подберем лучшие условия ипотеки. Работаем со всеми банками. Одобрение даже в сложных ситуациях.</p>
                     <div class="service-price">Консультация брокера</div>
@@ -332,19 +311,19 @@
             <p class="section-subtitle">Работаем на результат и ценим доверие каждого клиента</p>
             <div class="why-grid">
                 <div class="why-card fade-in">
-                    <div class="why-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
+                    <div class="why-icon">🛡️</div>
                     <div><h3>Прозрачный договор</h3><p>Никаких скрытых услуг и дополнительных платежей. Все условия фиксируются в договоре заранее.</p></div>
                 </div>
                 <div class="why-card fade-in">
-                    <div class="why-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></div>
+                    <div class="why-icon">⏰</div>
                     <div><h3>Контроль на каждом этапе</h3><p>Сопровождаем сделку от первого звонка до получения ключей. Вы всегда в курсе происходящего.</p></div>
                 </div>
                 <div class="why-card fade-in">
-                    <div class="why-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></div>
+                    <div class="why-icon">👤</div>
                     <div><h3>Персональный подход</h3><p>За вами закрепляется персональный эксперт, а не колл-центр. Все вопросы решаются быстро.</p></div>
                 </div>
                 <div class="why-card fade-in">
-                    <div class="why-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+                    <div class="why-icon">✅</div>
                     <div><h3>Гарантия результата</h3><p>1000+ успешных сделок говорят сами за себя. Несем ответственность за каждую сделку.</p></div>
                 </div>
             </div>
@@ -354,18 +333,16 @@
     <section id="expert" class="expert">
         <div class="container">
             <div class="expert-content">
-                <div class="expert-photo">
-                    <img src="https://cdn.pixabay.com/photo/2015/01/08/18/24/ceo-593616_1280.jpg" alt="Наталья" loading="lazy">
-                </div>
+                <div class="expert-photo">👩‍💼</div>
                 <div class="expert-info">
                     <h2>Наталья</h2>
                     <div class="expert-title">Ведущий эксперт АН «Твой Дом» | 10+ лет опыта</div>
                     <p class="expert-bio">За 10 лет работы провела более 1000 успешных сделок с недвижимостью в Новосибирске. Специализируется на покупке и продаже квартир в новостройках и на вторичном рынке. Каждую сделку сопровождает лично — от первого звонка до получения ключей.</p>
                     <div class="expert-achievements">
-                        <div class="achievement"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg><span>Лучший риелтор АН ЦАН</span></div>
-                        <div class="achievement"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg><span>1000+ успешных сделок</span></div>
-                        <div class="achievement"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg><span>Работает с 2013 года</span></div>
-                        <div class="achievement"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg><span>Множество благодарных клиентов</span></div>
+                        <div class="achievement"><span>🏆 Лучший риелтор АН ЦАН</span></div>
+                        <div class="achievement"><span>📊 1000+ успешных сделок</span></div>
+                        <div class="achievement"><span>⏰ Работает с 2013 года</span></div>
+                        <div class="achievement"><span>💝 Множество благодарных клиентов</span></div>
                     </div>
                 </div>
             </div>
@@ -426,42 +403,37 @@
                         <div>
                             <div class="contact-section-title">Наталья</div>
                             <div class="contact-methods">
-                                <a href="tel:+79529358502" class="contact-method"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg><div><strong>Телефон</strong><div>+7 (952) 935-85-02</div></div></a>
-                                <a href="https://wa.me/79529358502" class="contact-method" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><div><strong>WhatsApp</strong><div>Написать</div></div></a>
-                                <a href="https://t.me/+79529358502" class="contact-method" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg><div><strong>Telegram</strong><div>Написать</div></div></a>
+                                <a href="tel:+79529358502" class="contact-method"><div><strong>Телефон</strong><div>+7 (952) 935-85-02</div></div></a>
+                                <a href="https://wa.me/79529358502" class="contact-method" target="_blank"><div><strong>WhatsApp</strong><div>Написать</div></div></a>
+                                <a href="https://t.me/+79529358502" class="contact-method" target="_blank"><div><strong>Telegram</strong><div>Написать</div></div></a>
                             </div>
                         </div>
                         <div>
                             <div class="contact-section-title">Сергей</div>
                             <div class="contact-methods">
-                                <a href="tel:+79529358508" class="contact-method"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg><div><strong>Телефон</strong><div>+7 (952) 935-85-08</div></div></a>
-                                <a href="https://wa.me/79529358508" class="contact-method" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><div><strong>WhatsApp</strong><div>Написать</div></div></a>
-                                <a href="https://t.me/+79529358508" class="contact-method" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg><div><strong>Telegram</strong><div>Написать</div></div></a>
+                                <a href="tel:+79529358508" class="contact-method"><div><strong>Телефон</strong><div>+7 (952) 935-85-08</div></div></a>
+                                <a href="https://wa.me/79529358508" class="contact-method" target="_blank"><div><strong>WhatsApp</strong><div>Написать</div></div></a>
+                                <a href="https://t.me/+79529358508" class="contact-method" target="_blank"><div><strong>Telegram</strong><div>Написать</div></div></a>
                             </div>
                         </div>
                     </div>
                     <div class="contact-section-title">Email</div>
-                    <a href="mailto:tvoydom15@mail.ru" class="contact-method" style="display: inline-flex; max-width: 300px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg><div><strong>tvoydom15@mail.ru</strong></div></a>
+                    <a href="mailto:tvoydom15@mail.ru" class="contact-method" style="display: inline-flex; max-width: 300px;"><div><strong>tvoydom15@mail.ru</strong></div></a>
                 </div>
                 
                 <div class="contact-form">
-                    <form action="https://formsubmit.co/websergio@mail.ru" method="POST">
-                        <input type="hidden" name="_subject" value="🏠 Заявка с сайта tvoydom-54.ru">
-                        <input type="hidden" name="_captcha" value="false">
-                        <input type="hidden" name="_template" value="table">
-                        <input type="text" name="_honey" style="display:none">
-                        
+                    <form id="contactForm">
                         <div class="form-group">
                             <label for="name">Ваше имя</label>
-                            <input type="text" id="name" name="Имя" required placeholder="Как к вам обращаться?">
+                            <input type="text" id="name" name="name" required placeholder="Как к вам обращаться?">
                         </div>
                         <div class="form-group">
                             <label for="phone">Телефон</label>
-                            <input type="tel" id="phone" name="Телефон" required placeholder="+7 (___) ___-__-__">
+                            <input type="tel" id="phone" name="phone" required placeholder="+7 (___) ___-__-__">
                         </div>
                         <div class="form-group">
                             <label for="service">Что вас интересует?</label>
-                            <select id="service" name="Услуга">
+                            <select id="service" name="service">
                                 <option value="Покупка квартиры">Покупка квартиры</option>
                                 <option value="Продажа квартиры">Продажа квартиры</option>
                                 <option value="Помощь с ипотекой">Помощь с ипотекой</option>
@@ -469,10 +441,11 @@
                             </select>
                         </div>
                         <div class="checkbox-group">
-                            <input type="checkbox" id="agree" name="Согласие" required>
+                            <input type="checkbox" id="agree" name="agree" required>
                             <label for="agree">Я согласен на обработку персональных данных</label>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-submit">Записаться на консультацию</button>
+                        <button type="submit" class="btn btn-primary btn-submit" id="submitBtn">Записаться на консультацию</button>
+                        <div id="formMessage" class="form-message"></div>
                     </form>
                 </div>
             </div>
@@ -583,6 +556,49 @@
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) { target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
             });
+        });
+        
+        // Отправка формы через AJAX
+        document.getElementById('contactForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const btn = document.getElementById('submitBtn');
+            const message = document.getElementById('formMessage');
+            const formData = new FormData(this);
+            
+            btn.textContent = 'Отправка...';
+            btn.disabled = true;
+            message.style.display = 'none';
+            
+            try {
+                const response = await fetch('https://formsubmit.co/ajax/websergio@mail.ru', {
+                    method: 'POST',
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        name: formData.get('name'),
+                        phone: formData.get('phone'),
+                        service: formData.get('service'),
+                        agree: formData.get('agree') ? 'Согласен' : 'Не согласен'
+                    })
+                });
+                
+                if (response.ok) {
+                    message.textContent = '✅ Спасибо! Заявка успешно отправлена. Мы свяжемся с вами в ближайшее время.';
+                    message.className = 'form-message success';
+                    this.reset();
+                } else {
+                    throw new Error('Ошибка отправки');
+                }
+            } catch (error) {
+                message.textContent = '❌ Произошла ошибка. Пожалуйста, позвоните нам напрямую: +7 (952) 935-85-02';
+                message.className = 'form-message error';
+            } finally {
+                btn.textContent = 'Записаться на консультацию';
+                btn.disabled = false;
+            }
         });
     </script>
 </body>
