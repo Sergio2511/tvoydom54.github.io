@@ -3,293 +3,159 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Агентство недвижимости «Твой Дом» в Новосибирске. Покупка и продажа квартир под ключ. 10+ лет опыта, 1000+ сделок.">
-    <title>АН «Твой Дом» — Недвижимость в Новосибирске | 1000+ сделок</title>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>АН «Твой Дом» — Недвижимость в Новосибирске</title>
     
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
         (function(m,e,t,r,i,k,a){
             m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
             m[i].l=1*new Date();
-            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
             k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-        })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=109706741', 'ym');
+        })(window, document,'script','https://mc.yandex.ru/metrika/tag.js', 'ym');
 
-        ym(109706741, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+        ym(109706741, 'init', {webvisor:true, clickmap:true, trackLinks:true, accurateTrackBounce:true});
     </script>
     <noscript><div><img src="https://mc.yandex.ru/watch/109706741" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
     <!-- /Yandex.Metrika counter -->
     
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        
-        :root {
-            --primary: #2d3748;
-            --primary-dark: #1a202c;
-            --primary-light: #4a5568;
-            --accent: #c9b037;
-            --accent-light: #d4af37;
-            --text: #1a202c;
-            --text-light: #718096;
-            --bg: #faf9f7;
-            --bg-light: #f5f3f0;
-            --border: #e8e4de;
-            --card-bg: #ffffff;
-            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.15), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-        }
-        
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            color: var(--text);
-            line-height: 1.6;
-            background: var(--bg);
-            -webkit-font-smoothing: antialiased;
-        }
-        
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.6; color: #1a202c; background: #faf9f7; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
         
-        header {
-            position: fixed; top: 0; left: 0; right: 0;
-            background: rgba(250, 249, 247, 0.98);
-            backdrop-filter: blur(10px);
-            border-bottom: 2px solid var(--border);
-            z-index: 1000;
-        }
+        header { position: fixed; top: 0; left: 0; right: 0; background: rgba(250, 249, 247, 0.98); backdrop-filter: blur(10px); border-bottom: 2px solid #e8e4de; z-index: 1000; }
         .header-content { display: flex; align-items: center; justify-content: space-between; height: 72px; }
-        .logo { font-size: 18px; font-weight: 800; color: var(--primary); text-decoration: none; display: flex; align-items: center; gap: 8px; }
+        .logo { font-size: 18px; font-weight: 800; color: #2d3748; text-decoration: none; }
         nav { display: flex; gap: 24px; }
-        nav a { color: var(--text); text-decoration: none; font-size: 14px; font-weight: 500; }
-        nav a:hover { color: var(--accent); }
+        nav a { color: #1a202c; text-decoration: none; font-size: 14px; font-weight: 500; }
+        nav a:hover { color: #c9b037; }
         .header-right { display: flex; align-items: center; gap: 12px; }
-        .phone { color: var(--primary); text-decoration: none; font-weight: 700; font-size: 13px; }
-        
-        .btn {
-            display: inline-flex; align-items: center; justify-content: center;
-            padding: 10px 18px; border-radius: 6px; font-weight: 600; font-size: 13px;
-            text-decoration: none; transition: all 0.2s; border: none; cursor: pointer;
-        }
-        .btn-primary { 
-            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%); 
-            color: var(--primary-dark);
-        }
-        .btn-primary:hover { transform: translateY(-1px); box-shadow: var(--shadow-lg); }
-        .btn-secondary { background: transparent; color: var(--primary); border: 2px solid var(--primary); }
-        .btn-secondary:hover { background: var(--primary); color: white; }
-        
+        .phone { color: #2d3748; text-decoration: none; font-weight: 700; font-size: 13px; }
+        .btn { display: inline-flex; align-items: center; justify-content: center; padding: 10px 18px; border-radius: 6px; font-weight: 600; font-size: 13px; text-decoration: none; border: none; cursor: pointer; }
+        .btn-primary { background: linear-gradient(135deg, #c9b037 0%, #d4af37 100%); color: #1a202c; }
+        .btn-primary:hover { transform: translateY(-1px); }
+        .btn-secondary { background: transparent; color: #2d3748; border: 2px solid #2d3748; }
         .burger { display: none; flex-direction: column; gap: 4px; cursor: pointer; padding: 8px; }
-        .burger span { width: 24px; height: 2px; background: var(--primary); }
+        .burger span { width: 24px; height: 2px; background: #2d3748; }
         
-        .hero { margin-top: 72px; padding: 80px 0; background: linear-gradient(135deg, var(--bg) 0%, var(--bg-light) 100%); }
+        .hero { margin-top: 72px; padding: 80px 0; background: linear-gradient(135deg, #faf9f7 0%, #f5f3f0 100%); }
         .hero-content { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
-        .hero-badge { 
-            display: inline-block; background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); 
-            color: white; padding: 8px 20px; border-radius: 24px; font-size: 13px; font-weight: 700; margin-bottom: 24px;
-        }
-        .hero h1 { font-size: 44px; font-weight: 800; line-height: 1.2; margin-bottom: 24px; color: var(--primary); }
-        .hero-subtitle { font-size: 18px; color: var(--text-light); margin-bottom: 32px; line-height: 1.7; }
+        .hero-badge { display: inline-block; background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%); color: white; padding: 8px 20px; border-radius: 24px; font-size: 13px; font-weight: 700; margin-bottom: 24px; }
+        .hero h1 { font-size: 44px; font-weight: 800; line-height: 1.2; margin-bottom: 24px; color: #2d3748; }
+        .hero-subtitle { font-size: 18px; color: #718096; margin-bottom: 32px; line-height: 1.7; }
         .hero-buttons { display: flex; gap: 16px; margin-bottom: 40px; flex-wrap: wrap; }
-        .hero-trust { display: flex; gap: 32px; padding-top: 32px; border-top: 1px solid var(--border); flex-wrap: wrap; }
+        .hero-trust { display: flex; gap: 32px; padding-top: 32px; border-top: 1px solid #e8e4de; flex-wrap: wrap; }
         .trust-item { display: flex; align-items: center; gap: 12px; }
-        .trust-icon { 
-            width: 44px; height: 44px; background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); 
-            border-radius: 10px; display: flex; align-items: center; justify-content: center; box-shadow: var(--shadow);
-        }
-        .trust-icon svg { stroke: var(--accent); }
-        .trust-text { font-size: 13px; color: var(--text-light); }
-        .trust-text strong { display: block; color: var(--primary); font-size: 15px; font-weight: 700; }
-        
-        .hero-image {
-            position: relative; border-radius: 16px; overflow: hidden; box-shadow: var(--shadow-lg);
-            aspect-ratio: 4/3; max-width: 450px; width: 100%;
-            background: linear-gradient(135deg, #e8e4de 0%, #d4cfc7 100%);
-        }
+        .trust-icon { width: 44px; height: 44px; background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%); border-radius: 10px; display: flex; align-items: center; justify-content: center; }
+        .trust-icon svg { stroke: #c9b037; }
+        .trust-text { font-size: 13px; color: #718096; }
+        .trust-text strong { display: block; color: #2d3748; font-size: 15px; font-weight: 700; }
+        .hero-image { position: relative; border-radius: 16px; overflow: hidden; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15); aspect-ratio: 4/3; max-width: 450px; width: 100%; }
         .hero-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
-        .image-placeholder { 
-            width: 100%; height: 100%; background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); 
-            display: flex; align-items: center; justify-content: center; color: white; 
-        }
         
-        .stats { padding: 80px 0; background: var(--card-bg); }
+        .stats { padding: 80px 0; background: white; }
         .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
-        .stat-card { 
-            text-align: center; padding: 32px 24px; background: var(--bg-light); border-radius: 12px; 
-            border-top: 3px solid var(--accent); transition: all 0.3s; 
-        }
-        .stat-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
-        .stat-number { font-size: 48px; font-weight: 800; color: var(--primary); margin-bottom: 8px; display: block; }
-        .stat-label { font-size: 14px; color: var(--text-light); font-weight: 500; }
+        .stat-card { text-align: center; padding: 32px 24px; background: #f5f3f0; border-radius: 12px; border-top: 3px solid #c9b037; }
+        .stat-number { font-size: 48px; font-weight: 800; color: #2d3748; margin-bottom: 8px; display: block; }
+        .stat-label { font-size: 14px; color: #718096; font-weight: 500; }
         
-        .services { padding: 80px 0; background: var(--bg-light); }
-        .section-title { text-align: center; font-size: 40px; font-weight: 800; margin-bottom: 16px; color: var(--primary); }
-        .section-subtitle { text-align: center; font-size: 17px; color: var(--text-light); margin-bottom: 64px; }
+        .services { padding: 80px 0; background: #f5f3f0; }
+        .section-title { text-align: center; font-size: 40px; font-weight: 800; margin-bottom: 16px; color: #2d3748; }
+        .section-subtitle { text-align: center; font-size: 17px; color: #718096; margin-bottom: 64px; }
         .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
-        .service-card { 
-            background: var(--card-bg); padding: 36px 32px; border-radius: 12px; box-shadow: var(--shadow); 
-            transition: all 0.3s; border-bottom: 3px solid transparent;
-        }
-        .service-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); border-bottom-color: var(--accent); }
-        .service-icon { 
-            width: 60px; height: 60px; background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); 
-            border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 24px;
-        }
-        .service-icon svg { stroke: var(--accent); }
-        .service-card h3 { font-size: 20px; font-weight: 700; margin-bottom: 12px; color: var(--primary); }
-        .service-card p { color: var(--text-light); margin-bottom: 16px; line-height: 1.6; }
-        .service-price { font-size: 17px; font-weight: 700; color: var(--accent); }
+        .service-card { background: white; padding: 36px 32px; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); border-bottom: 3px solid transparent; transition: all 0.3s; }
+        .service-card:hover { transform: translateY(-6px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15); border-bottom-color: #c9b037; }
+        .service-icon { width: 60px; height: 60px; background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 24px; }
+        .service-icon svg { stroke: #c9b037; }
+        .service-card h3 { font-size: 20px; font-weight: 700; margin-bottom: 12px; color: #2d3748; }
+        .service-card p { color: #718096; margin-bottom: 16px; line-height: 1.6; }
+        .service-price { font-size: 17px; font-weight: 700; color: #c9b037; }
         
-        .calculator { padding: 80px 0; background: var(--card-bg); }
-        .calc-container { 
-            max-width: 850px; margin: 0 auto; background: var(--bg-light); padding: 48px; 
-            border-radius: 16px; box-shadow: var(--shadow-lg); border: 1px solid var(--border);
-        }
+        .calculator { padding: 80px 0; background: white; }
+        .calc-container { max-width: 850px; margin: 0 auto; background: #f5f3f0; padding: 48px; border-radius: 16px; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15); }
         .calc-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; margin-bottom: 32px; }
-        .calc-group label { display: block; font-size: 14px; font-weight: 600; color: var(--primary); margin-bottom: 8px; }
-        .calc-group input { 
-            width: 100%; padding: 14px 16px; border: 2px solid var(--border); border-radius: 8px; 
-            font-size: 16px; font-family: inherit; background: var(--card-bg); color: var(--text);
-        }
-        .calc-group input:focus { outline: none; border-color: var(--accent); }
-        .calc-result { 
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); 
-            color: white; padding: 36px; border-radius: 12px; text-align: center;
-        }
+        .calc-group label { display: block; font-size: 14px; font-weight: 600; color: #2d3748; margin-bottom: 8px; }
+        .calc-group input { width: 100%; padding: 14px 16px; border: 2px solid #e8e4de; border-radius: 8px; font-size: 16px; background: white; color: #1a202c; }
+        .calc-group input:focus { outline: none; border-color: #c9b037; }
+        .calc-result { background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%); color: white; padding: 36px; border-radius: 12px; text-align: center; }
         .calc-result-label { font-size: 15px; opacity: 0.9; margin-bottom: 12px; font-weight: 500; }
-        .calc-result-value { font-size: 48px; font-weight: 800; color: var(--accent-light); }
+        .calc-result-value { font-size: 48px; font-weight: 800; color: #d4af37; }
         .calc-result-note { font-size: 13px; opacity: 0.75; margin-top: 16px; }
         
-        .why-us { padding: 80px 0; background: var(--bg); }
+        .why-us { padding: 80px 0; background: #faf9f7; }
         .why-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
-        .why-card { 
-            display: flex; gap: 24px; padding: 32px; background: var(--card-bg); border-radius: 12px; 
-            transition: all 0.3s; border-left: 4px solid var(--accent);
-        }
-        .why-card:hover { box-shadow: var(--shadow-lg); transform: translateX(4px); }
-        .why-icon { 
-            width: 52px; height: 52px; background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); 
-            border-radius: 10px; display: flex; align-items: center; justify-content: center;
-        }
-        .why-icon svg { stroke: var(--accent); }
-        .why-card h3 { font-size: 18px; font-weight: 700; margin-bottom: 8px; color: var(--primary); }
-        .why-card p { color: var(--text-light); font-size: 15px; line-height: 1.6; }
+        .why-card { display: flex; gap: 24px; padding: 32px; background: white; border-radius: 12px; border-left: 4px solid #c9b037; transition: all 0.3s; }
+        .why-card:hover { box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15); transform: translateX(4px); }
+        .why-icon { flex-shrink: 0; width: 52px; height: 52px; background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%); border-radius: 10px; display: flex; align-items: center; justify-content: center; }
+        .why-icon svg { stroke: #c9b037; }
+        .why-card h3 { font-size: 18px; font-weight: 700; margin-bottom: 8px; color: #2d3748; }
+        .why-card p { color: #718096; font-size: 15px; line-height: 1.6; }
         
-        .expert { padding: 80px 0; background: var(--card-bg); }
+        .expert { padding: 80px 0; background: white; }
         .expert-content { display: grid; grid-template-columns: 1fr 2fr; gap: 64px; align-items: center; }
-        .expert-photo {
-            position: relative; border-radius: 16px; overflow: hidden; box-shadow: var(--shadow-lg);
-            aspect-ratio: 3/4; max-width: 350px; width: 100%;
-            background: linear-gradient(135deg, #e8e4de 0%, #d4cfc7 100%);
-        }
+        .expert-photo { position: relative; border-radius: 16px; overflow: hidden; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15); aspect-ratio: 3/4; max-width: 350px; width: 100%; }
         .expert-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
-        .expert-info h2 { font-size: 36px; font-weight: 800; margin-bottom: 8px; color: var(--primary); }
-        .expert-title { font-size: 17px; color: var(--accent); font-weight: 700; margin-bottom: 24px; text-transform: uppercase; }
-        .expert-bio { font-size: 16px; color: var(--text-light); margin-bottom: 32px; line-height: 1.8; }
+        .expert-info h2 { font-size: 36px; font-weight: 800; margin-bottom: 8px; color: #2d3748; }
+        .expert-title { font-size: 17px; color: #c9b037; font-weight: 700; margin-bottom: 24px; text-transform: uppercase; }
+        .expert-bio { font-size: 16px; color: #718096; margin-bottom: 32px; line-height: 1.8; }
         .expert-achievements { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
-        .achievement { 
-            display: flex; align-items: center; gap: 12px; padding: 16px 20px; 
-            background: var(--bg-light); border-radius: 10px; border-left: 3px solid var(--accent);
-        }
-        .achievement svg { stroke: var(--accent); }
-        .achievement span { font-weight: 600; color: var(--primary); font-size: 14px; }
+        .achievement { display: flex; align-items: center; gap: 12px; padding: 16px 20px; background: #f5f3f0; border-radius: 10px; border-left: 3px solid #c9b037; }
+        .achievement svg { stroke: #c9b037; }
+        .achievement span { font-weight: 600; color: #2d3748; font-size: 14px; }
         
-        .reviews { padding: 80px 0; background: var(--bg-light); }
+        .reviews { padding: 80px 0; background: #f5f3f0; }
         .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
-        .review-card { 
-            background: var(--card-bg); padding: 36px; border-radius: 12px; 
-            box-shadow: var(--shadow); border-top: 4px solid var(--accent);
-        }
-        .review-stars { color: var(--accent-light); margin-bottom: 20px; font-size: 20px; letter-spacing: 2px; }
-        .review-text { color: var(--text); margin-bottom: 24px; line-height: 1.7; font-style: italic; font-size: 15px; }
+        .review-card { background: white; padding: 36px; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); border-top: 4px solid #c9b037; }
+        .review-stars { color: #d4af37; margin-bottom: 20px; font-size: 20px; letter-spacing: 2px; }
+        .review-text { color: #1a202c; margin-bottom: 24px; line-height: 1.7; font-style: italic; font-size: 15px; }
         .review-author { display: flex; align-items: center; gap: 14px; }
-        .review-avatar { 
-            width: 50px; height: 50px; background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); 
-            border-radius: 50%; display: flex; align-items: center; justify-content: center; 
-            color: var(--accent); font-weight: 800; font-size: 18px;
-        }
-        .review-name { font-weight: 700; color: var(--primary); font-size: 15px; }
-        .review-date { font-size: 13px; color: var(--text-light); }
+        .review-avatar { width: 50px; height: 50px; background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #c9b037; font-weight: 800; font-size: 18px; }
+        .review-name { font-weight: 700; color: #2d3748; font-size: 15px; }
+        .review-date { font-size: 13px; color: #718096; }
         
-        .faq { padding: 80px 0; background: var(--card-bg); }
+        .faq { padding: 80px 0; background: white; }
         .faq-list { max-width: 850px; margin: 0 auto; }
-        .faq-item { border-bottom: 1px solid var(--border); padding: 24px 0; }
-        .faq-question { 
-            display: flex; justify-content: space-between; align-items: center; cursor: pointer; 
-            font-size: 17px; font-weight: 700; color: var(--primary);
-        }
-        .faq-toggle { 
-            width: 36px; height: 36px; background: var(--bg-light); border-radius: 50%; 
-            display: flex; align-items: center; justify-content: center; font-size: 20px; color: var(--accent);
-        }
-        .faq-item.active .faq-toggle { background: var(--primary); color: white; transform: rotate(45deg); }
-        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; color: var(--text-light); line-height: 1.7; }
+        .faq-item { border-bottom: 1px solid #e8e4de; padding: 24px 0; }
+        .faq-question { display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-size: 17px; font-weight: 700; color: #2d3748; }
+        .faq-toggle { width: 36px; height: 36px; background: #f5f3f0; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; color: #c9b037; }
+        .faq-item.active .faq-toggle { background: #2d3748; color: white; transform: rotate(45deg); }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; color: #718096; line-height: 1.7; }
         .faq-item.active .faq-answer { max-height: 500px; padding-top: 16px; }
         
-        .contact { 
-            padding: 60px 0; background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); 
-            color: white; position: relative; overflow: hidden;
-        }
-        .contact::before {
-            content: ''; position: absolute; top: -50%; right: -20%; width: 600px; height: 600px;
-            background: radial-gradient(circle, rgba(201, 176, 55, 0.1) 0%, transparent 70%); pointer-events: none;
-        }
+        .contact { padding: 60px 0; background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%); color: white; position: relative; overflow: hidden; }
         .contact-content { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: flex-start; position: relative; z-index: 1; }
         .contact-info h2 { font-size: 32px; font-weight: 800; margin-bottom: 16px; }
         .contact-info p { font-size: 16px; margin-bottom: 24px; opacity: 0.95; line-height: 1.5; }
-        
         .contact-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-bottom: 24px; }
-        .contact-section-title { 
-            font-size: 14px; font-weight: 700; color: var(--accent-light); margin-bottom: 12px; 
-            text-transform: uppercase; letter-spacing: 0.5px;
-        }
+        .contact-section-title { font-size: 14px; font-weight: 700; color: #d4af37; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.5px; }
         .contact-methods { display: flex; flex-direction: column; gap: 10px; }
-        .contact-method { 
-            display: flex; align-items: center; gap: 10px; padding: 10px 12px; 
-            background: rgba(255, 255, 255, 0.1); border-radius: 6px; text-decoration: none; color: white; 
-            transition: all 0.2s; border: 1px solid rgba(255, 255, 255, 0.15);
-        }
+        .contact-method { display: flex; align-items: center; gap: 10px; padding: 10px 12px; background: rgba(255, 255, 255, 0.1); border-radius: 6px; text-decoration: none; color: white; transition: all 0.2s; border: 1px solid rgba(255, 255, 255, 0.15); }
         .contact-method:hover { background: rgba(255, 255, 255, 0.18); transform: translateX(2px); }
-        .contact-method svg { stroke: var(--accent-light); flex-shrink: 0; width: 16px; height: 16px; }
+        .contact-method svg { stroke: #d4af37; flex-shrink: 0; width: 16px; height: 16px; }
         .contact-method strong { display: block; font-size: 11px; font-weight: 700; opacity: 0.85; }
         .contact-method div div:last-child { font-size: 13px; font-weight: 600; }
-        
-        .contact-form { background: var(--card-bg); padding: 32px; border-radius: 12px; box-shadow: var(--shadow-lg); }
+        .contact-form { background: white; padding: 32px; border-radius: 12px; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15); }
         .form-group { margin-bottom: 16px; }
-        .form-group label { display: block; margin-bottom: 6px; font-weight: 600; color: var(--primary); font-size: 13px; }
-        .form-group input, .form-group select { 
-            width: 100%; padding: 11px 14px; border: 2px solid var(--border); border-radius: 6px; 
-            font-size: 14px; font-family: inherit; background: var(--bg); color: var(--text);
-        }
-        .form-group input:focus, .form-group select:focus { outline: none; border-color: var(--accent); }
+        .form-group label { display: block; margin-bottom: 6px; font-weight: 600; color: #2d3748; font-size: 13px; }
+        .form-group input, .form-group select { width: 100%; padding: 11px 14px; border: 2px solid #e8e4de; border-radius: 6px; font-size: 14px; font-family: inherit; background: #faf9f7; color: #1a202c; }
+        .form-group input:focus, .form-group select:focus { outline: none; border-color: #c9b037; }
         .checkbox-group { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 20px; }
-        .checkbox-group input { margin-top: 3px; accent-color: var(--accent); }
-        .checkbox-group label { font-size: 12px; color: var(--text-light); line-height: 1.4; }
+        .checkbox-group input { margin-top: 3px; accent-color: #c9b037; }
+        .checkbox-group label { font-size: 12px; color: #718096; line-height: 1.4; }
         .btn-submit { width: 100%; padding: 13px; font-size: 14px; font-weight: 700; }
         
-        footer { background: var(--primary-dark); color: white; padding: 48px 0 24px; border-top: 3px solid var(--accent); }
+        footer { background: #1a202c; color: white; padding: 48px 0 24px; border-top: 3px solid #c9b037; }
         .footer-content { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 48px; margin-bottom: 32px; }
-        .footer-logo { font-size: 24px; font-weight: 800; margin-bottom: 12px; color: var(--accent-light); }
+        .footer-logo { font-size: 24px; font-weight: 800; margin-bottom: 12px; color: #d4af37; }
         .footer-description { color: rgba(255, 255, 255, 0.7); margin-bottom: 20px; line-height: 1.6; font-size: 14px; }
-        .footer-section h4 { margin-bottom: 16px; font-size: 15px; color: var(--accent-light); font-weight: 700; }
+        .footer-section h4 { margin-bottom: 16px; font-size: 15px; color: #d4af37; font-weight: 700; }
         .footer-section ul { list-style: none; }
         .footer-section li { margin-bottom: 10px; }
         .footer-section a { color: rgba(255, 255, 255, 0.75); text-decoration: none; font-size: 14px; }
-        .footer-section a:hover { color: var(--accent-light); }
-        .footer-bottom { 
-            padding-top: 24px; border-top: 1px solid rgba(255, 255, 255, 0.1); 
-            text-align: center; color: rgba(255, 255, 255, 0.5); font-size: 13px; 
-        }
+        .footer-section a:hover { color: #d4af37; }
+        .footer-bottom { padding-top: 24px; border-top: 1px solid rgba(255, 255, 255, 0.1); text-align: center; color: rgba(255, 255, 255, 0.5); font-size: 13px; }
         
-        .fab { 
-            position: fixed; bottom: 28px; right: 28px; width: 56px; height: 56px; 
-            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%); 
-            border-radius: 50%; display: flex; align-items: center; justify-content: center; 
-            box-shadow: 0 10px 30px rgba(201, 176, 55, 0.4);
-            cursor: pointer; transition: all 0.3s; z-index: 999; text-decoration: none; color: var(--primary-dark);
-        }
+        .fab { position: fixed; bottom: 28px; right: 28px; width: 56px; height: 56px; background: linear-gradient(135deg, #c9b037 0%, #d4af37 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 30px rgba(201, 176, 55, 0.4); cursor: pointer; transition: all 0.3s; z-index: 999; text-decoration: none; color: #1a202c; }
         .fab:hover { transform: scale(1.1) translateY(-4px); }
         
         @media (max-width: 1024px) {
@@ -324,19 +190,10 @@
             .contact-info h2 { font-size: 26px; }
             .contact-method { font-size: 12px; padding: 8px 10px; }
         }
-        
-        .mobile-menu { 
-            display: none; position: fixed; top: 72px; left: 0; right: 0; 
-            background: var(--bg); padding: 24px; box-shadow: var(--shadow-lg); z-index: 999;
-            border-top: 2px solid var(--border);
-        }
+        .mobile-menu { display: none; position: fixed; top: 72px; left: 0; right: 0; background: #faf9f7; padding: 24px; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15); z-index: 999; border-top: 2px solid #e8e4de; }
         .mobile-menu.active { display: block; }
-        .mobile-menu a { 
-            display: block; padding: 14px 0; color: var(--text); text-decoration: none; 
-            font-weight: 600; border-bottom: 1px solid var(--border); font-size: 16px;
-        }
-        .mobile-menu a:hover { color: var(--accent); }
-        
+        .mobile-menu a { display: block; padding: 14px 0; color: #1a202c; text-decoration: none; font-weight: 600; border-bottom: 1px solid #e8e4de; font-size: 16px; }
+        .mobile-menu a:hover { color: #c9b037; }
         .fade-in { opacity: 0; transform: translateY(20px); transition: all 0.6s ease; }
         .fade-in.visible { opacity: 1; transform: translateY(0); }
     </style>
@@ -345,13 +202,7 @@
     <header>
         <div class="container">
             <div class="header-content">
-                <a href="#" class="logo">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
-                    </svg>
-                    Твой Дом
-                </a>
+                <a href="#" class="logo">🏠 Твой Дом</a>
                 <nav>
                     <a href="#services">Услуги</a>
                     <a href="#calculator">Калькулятор</a>
@@ -362,9 +213,7 @@
                 <div class="header-right">
                     <a href="tel:+79529358502" class="phone">+7 (952) 935-85-02</a>
                     <a href="#contact" class="btn btn-primary">Консультация</a>
-                    <button class="burger" onclick="toggleMenu()" aria-label="Меню">
-                        <span></span><span></span><span></span>
-                    </button>
+                    <button class="burger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
                 </div>
             </div>
         </div>
@@ -391,26 +240,17 @@
                     </div>
                     <div class="hero-trust">
                         <div class="trust-item">
-                            <div class="trust-icon">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                                </svg>
-                            </div>
+                            <div class="trust-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
                             <div class="trust-text"><strong>Гарантия безопасности</strong>Проверка юридической чистоты</div>
                         </div>
                         <div class="trust-item">
-                            <div class="trust-icon">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <circle cx="12" cy="12" r="10"></circle>
-                                    <polyline points="12 6 12 12 16 14"></polyline>
-                                </svg>
-                            </div>
+                            <div class="trust-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></div>
                             <div class="trust-text"><strong>Работаем с 2013 года</strong>10+ лет на рынке</div>
                         </div>
                     </div>
                 </div>
                 <div class="hero-image">
-                    <img src="https://cdn.pixabay.com/photo/2016/11/18/17/46/living-room-1835923_1280.jpg" alt="Квартира с ключами" loading="lazy">
+                    <img src="https://cdn.pixabay.com/photo/2016/11/18/17/46/living-room-1835923_1280.jpg" alt="Квартира" loading="lazy">
                 </div>
             </div>
         </div>
@@ -433,36 +273,19 @@
             <p class="section-subtitle">Полное сопровождение сделки от поиска квартиры до получения ключей</p>
             <div class="services-grid">
                 <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="11" cy="11" r="8"></circle>
-                            <path d="m21 21-4.35-4.35"></path>
-                        </svg>
-                    </div>
+                    <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg></div>
                     <h3>Подбор квартиры</h3>
                     <p>Найдем идеальный вариант под ваш бюджет и требования. Работа с новостройками и вторичным рынком.</p>
                     <div class="service-price">Бесплатно при покупке</div>
                 </div>
                 <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                            <polyline points="14 2 14 8 20 8"></polyline>
-                            <line x1="16" y1="13" x2="8" y2="13"></line>
-                            <line x1="16" y1="17" x2="8" y2="17"></line>
-                        </svg>
-                    </div>
+                    <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg></div>
                     <h3>Юридическая проверка</h3>
                     <p>Полная проверка юридической чистоты объекта. Защита от рисков и скрытых проблем.</p>
                     <div class="service-price">Входит в сопровождение</div>
                 </div>
                 <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="12" y1="1" x2="12" y2="23"></line>
-                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
-                        </svg>
-                    </div>
+                    <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg></div>
                     <h3>Помощь с ипотекой</h3>
                     <p>Подберем лучшие условия ипотеки. Работаем со всеми банками. Одобрение даже в сложных ситуациях.</p>
                     <div class="service-price">Консультация брокера</div>
@@ -475,7 +298,6 @@
         <div class="container">
             <h2 class="section-title">Ипотечный калькулятор</h2>
             <p class="section-subtitle">Рассчитайте примерный ежемесячный платеж за 10 секунд</p>
-            
             <div class="calc-container fade-in">
                 <div class="calc-grid">
                     <div class="calc-group">
@@ -510,39 +332,19 @@
             <p class="section-subtitle">Работаем на результат и ценим доверие каждого клиента</p>
             <div class="why-grid">
                 <div class="why-card fade-in">
-                    <div class="why-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                        </svg>
-                    </div>
+                    <div class="why-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
                     <div><h3>Прозрачный договор</h3><p>Никаких скрытых услуг и дополнительных платежей. Все условия фиксируются в договоре заранее.</p></div>
                 </div>
                 <div class="why-card fade-in">
-                    <div class="why-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <polyline points="12 6 12 12 16 14"></polyline>
-                        </svg>
-                    </div>
+                    <div class="why-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></div>
                     <div><h3>Контроль на каждом этапе</h3><p>Сопровождаем сделку от первого звонка до получения ключей. Вы всегда в курсе происходящего.</p></div>
                 </div>
                 <div class="why-card fade-in">
-                    <div class="why-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                            <circle cx="9" cy="7" r="4"></circle>
-                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                        </svg>
-                    </div>
+                    <div class="why-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></div>
                     <div><h3>Персональный подход</h3><p>За вами закрепляется персональный эксперт, а не колл-центр. Все вопросы решаются быстро.</p></div>
                 </div>
                 <div class="why-card fade-in">
-                    <div class="why-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polyline points="20 6 9 17 4 12"></polyline>
-                        </svg>
-                    </div>
+                    <div class="why-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
                     <div><h3>Гарантия результата</h3><p>1000+ успешных сделок говорят сами за себя. Несем ответственность за каждую сделку.</p></div>
                 </div>
             </div>
@@ -553,41 +355,17 @@
         <div class="container">
             <div class="expert-content">
                 <div class="expert-photo">
-                    <img src="https://cdn.pixabay.com/photo/2015/01/08/18/24/ceo-593616_1280.jpg" alt="Наталья - ведущий эксперт" loading="lazy">
+                    <img src="https://cdn.pixabay.com/photo/2015/01/08/18/24/ceo-593616_1280.jpg" alt="Наталья" loading="lazy">
                 </div>
                 <div class="expert-info">
                     <h2>Наталья</h2>
                     <div class="expert-title">Ведущий эксперт АН «Твой Дом» | 10+ лет опыта</div>
                     <p class="expert-bio">За 10 лет работы провела более 1000 успешных сделок с недвижимостью в Новосибирске. Специализируется на покупке и продаже квартир в новостройках и на вторичном рынке. Каждую сделку сопровождает лично — от первого звонка до получения ключей.</p>
                     <div class="expert-achievements">
-                        <div class="achievement">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <circle cx="12" cy="8" r="7"></circle>
-                                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
-                            </svg>
-                            <span>Лучший риелтор АН ЦАН</span>
-                        </div>
-                        <div class="achievement">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                                <polyline points="14 2 14 8 20 8"></polyline>
-                            </svg>
-                            <span>1000+ успешных сделок</span>
-                        </div>
-                        <div class="achievement">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <circle cx="12" cy="12" r="10"></circle>
-                                <polyline points="12 6 12 12 16 14"></polyline>
-                            </svg>
-                            <span>Работает с 2013 года</span>
-                        </div>
-                        <div class="achievement">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                            </svg>
-                            <span>Множество благодарных клиентов</span>
-                        </div>
+                        <div class="achievement"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg><span>Лучший риелтор АН ЦАН</span></div>
+                        <div class="achievement"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg><span>1000+ успешных сделок</span></div>
+                        <div class="achievement"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg><span>Работает с 2013 года</span></div>
+                        <div class="achievement"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg><span>Множество благодарных клиентов</span></div>
                     </div>
                 </div>
             </div>
@@ -602,26 +380,17 @@
                 <div class="review-card fade-in">
                     <div class="review-stars">★★★★★</div>
                     <p class="review-text">"Огромное спасибо Наталье и агентству «Твой Дом» за помощь в поиске жилья и полном оформлении сделки. Остались только положительные эмоции! Смело рекомендую!"</p>
-                    <div class="review-author">
-                        <div class="review-avatar">А</div>
-                        <div><div class="review-name">Алексей М.</div><div class="review-date">2ГИС, 2024</div></div>
-                    </div>
+                    <div class="review-author"><div class="review-avatar">А</div><div><div class="review-name">Алексей М.</div><div class="review-date">2ГИС, 2024</div></div></div>
                 </div>
                 <div class="review-card fade-in">
                     <div class="review-stars">★★★★★</div>
                     <p class="review-text">"Наталья помогла купить квартиру в новостройке через агентство. Все прошло быстро и без нервов. Особенно порадовала помощь с ипотекой — одобрили с первого раза!"</p>
-                    <div class="review-author">
-                        <div class="review-avatar">Е</div>
-                        <div><div class="review-name">Елена К.</div><div class="review-date">2ГИС, 2024</div></div>
-                    </div>
+                    <div class="review-author"><div class="review-avatar">Е</div><div><div class="review-name">Елена К.</div><div class="review-date">2ГИС, 2024</div></div></div>
                 </div>
                 <div class="review-card fade-in">
                     <div class="review-stars">★★★★★</div>
                     <p class="review-text">"Продали квартиру за 3 недели по цене выше рыночной. Наталья — профессионал своего дела. Все документы подготовила идеально, сделка прошла гладко."</p>
-                    <div class="review-author">
-                        <div class="review-avatar">Д</div>
-                        <div><div class="review-name">Дмитрий В.</div><div class="review-date">2ГИС, 2024</div></div>
-                    </div>
+                    <div class="review-author"><div class="review-avatar">Д</div><div><div class="review-name">Дмитрий В.</div><div class="review-date">2ГИС, 2024</div></div></div>
                 </div>
             </div>
         </div>
@@ -632,31 +401,16 @@
             <h2 class="section-title">Частые вопросы</h2>
             <div class="faq-list">
                 <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFaq(this)">
-                        <span>Сколько стоят услуги агентства?</span>
-                        <div class="faq-toggle">+</div>
-                    </div>
-                    <div class="faq-answer">
-                        <p>По новостройкам комиссия 0%. По вторичному рынку стоимость сопровождения обсуждается индивидуально. Первая консультация всегда бесплатна.</p>
-                    </div>
+                    <div class="faq-question" onclick="toggleFaq(this)"><span>Сколько стоят услуги агентства?</span><div class="faq-toggle">+</div></div>
+                    <div class="faq-answer"><p>По новостройкам комиссия 0%. По вторичному рынку стоимость сопровождения обсуждается индивидуально. Первая консультация всегда бесплатна.</p></div>
                 </div>
                 <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFaq(this)">
-                        <span>Как происходит проверка юридической чистоты?</span>
-                        <div class="faq-toggle">+</div>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Мы проверяем все документы на объект, историю переходов права собственности, наличие обременений, арестов, залогов. Вы получаете полный отчет о рисках.</p>
-                    </div>
+                    <div class="faq-question" onclick="toggleFaq(this)"><span>Как происходит проверка юридической чистоты?</span><div class="faq-toggle">+</div></div>
+                    <div class="faq-answer"><p>Мы проверяем все документы на объект, историю переходов права собственности, наличие обременений, арестов, залогов. Вы получаете полный отчет о рисках.</p></div>
                 </div>
                 <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFaq(this)">
-                        <span>Помогаете ли вы с ипотекой?</span>
-                        <div class="faq-toggle">+</div>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Да, в штате агентства работает ипотечный брокер, который подберет лучшие условия ипотеки среди всех банков. Помогаем даже в сложных ситуациях.</p>
-                    </div>
+                    <div class="faq-question" onclick="toggleFaq(this)"><span>Помогаете ли вы с ипотекой?</span><div class="faq-toggle">+</div></div>
+                    <div class="faq-answer"><p>Да, в штате агентства работает ипотечный брокер, который подберет лучшие условия ипотеки среди всех банков. Помогаем даже в сложных ситуациях.</p></div>
                 </div>
             </div>
         </div>
@@ -668,91 +422,46 @@
                 <div class="contact-info">
                     <h2>Запишитесь на консультацию</h2>
                     <p>Обсудим вашу ситуацию и подберем оптимальное решение</p>
-                    
                     <div class="contact-columns">
                         <div>
                             <div class="contact-section-title">Наталья</div>
                             <div class="contact-methods">
-                                <a href="tel:+79529358502" class="contact-method">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                                    </svg>
-                                    <div><strong>Телефон</strong><div>+7 (952) 935-85-02</div></div>
-                                </a>
-                                <a href="https://wa.me/79529358502" class="contact-method" target="_blank">
-                                    <svg viewBox="0 0 24 24" fill="currentColor">
-                                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-                                    </svg>
-                                    <div><strong>WhatsApp</strong><div>Написать</div></div>
-                                </a>
-                                <a href="https://t.me/+79529358502" class="contact-method" target="_blank">
-                                    <svg viewBox="0 0 24 24" fill="currentColor">
-                                        <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
-                                    </svg>
-                                    <div><strong>Telegram</strong><div>Написать</div></div>
-                                </a>
-                                <a href="https://max.ru/79529358502" class="contact-method" target="_blank">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                                        <polyline points="22,6 12,13 2,6"></polyline>
-                                    </svg>
-                                    <div><strong>Max</strong><div>Написать</div></div>
-                                </a>
+                                <a href="tel:+79529358502" class="contact-method"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg><div><strong>Телефон</strong><div>+7 (952) 935-85-02</div></div></a>
+                                <a href="https://wa.me/79529358502" class="contact-method" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><div><strong>WhatsApp</strong><div>Написать</div></div></a>
+                                <a href="https://t.me/+79529358502" class="contact-method" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg><div><strong>Telegram</strong><div>Написать</div></div></a>
                             </div>
                         </div>
-                        
                         <div>
                             <div class="contact-section-title">Сергей</div>
                             <div class="contact-methods">
-                                <a href="tel:+79529358508" class="contact-method">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                                    </svg>
-                                    <div><strong>Телефон</strong><div>+7 (952) 935-85-08</div></div>
-                                </a>
-                                <a href="https://wa.me/79529358508" class="contact-method" target="_blank">
-                                    <svg viewBox="0 0 24 24" fill="currentColor">
-                                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-                                    </svg>
-                                    <div><strong>WhatsApp</strong><div>Написать</div></div>
-                                </a>
-                                <a href="https://t.me/+79529358508" class="contact-method" target="_blank">
-                                    <svg viewBox="0 0 24 24" fill="currentColor">
-                                        <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
-                                    </svg>
-                                    <div><strong>Telegram</strong><div>Написать</div></div>
-                                </a>
+                                <a href="tel:+79529358508" class="contact-method"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg><div><strong>Телефон</strong><div>+7 (952) 935-85-08</div></div></a>
+                                <a href="https://wa.me/79529358508" class="contact-method" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><div><strong>WhatsApp</strong><div>Написать</div></div></a>
+                                <a href="https://t.me/+79529358508" class="contact-method" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg><div><strong>Telegram</strong><div>Написать</div></div></a>
                             </div>
                         </div>
                     </div>
-                    
                     <div class="contact-section-title">Email</div>
-                    <a href="mailto:tvoydom15@mail.ru" class="contact-method" style="display: inline-flex; max-width: 300px;">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                            <polyline points="22,6 12,13 2,6"></polyline>
-                        </svg>
-                        <div><strong>tvoydom15@mail.ru</strong></div>
-                    </a>
+                    <a href="mailto:tvoydom15@mail.ru" class="contact-method" style="display: inline-flex; max-width: 300px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg><div><strong>tvoydom15@mail.ru</strong></div></a>
                 </div>
                 
                 <div class="contact-form">
-                    <form id="contactForm" action="https://formsubmit.co/websergio@mail.ru" method="POST">
-                        <input type="hidden" name="_subject" value="Новая заявка с лендинга АН Твой Дом">
+                    <form action="https://formsubmit.co/websergio@mail.ru" method="POST">
+                        <input type="hidden" name="_subject" value="🏠 Заявка с сайта tvoydom-54.ru">
                         <input type="hidden" name="_captcha" value="false">
                         <input type="hidden" name="_template" value="table">
+                        <input type="text" name="_honey" style="display:none">
                         
                         <div class="form-group">
                             <label for="name">Ваше имя</label>
-                            <input type="text" id="name" name="name" required placeholder="Как к вам обращаться?">
+                            <input type="text" id="name" name="Имя" required placeholder="Как к вам обращаться?">
                         </div>
                         <div class="form-group">
                             <label for="phone">Телефон</label>
-                            <input type="tel" id="phone" name="phone" required placeholder="+7 (___) ___-__-__">
+                            <input type="tel" id="phone" name="Телефон" required placeholder="+7 (___) ___-__-__">
                         </div>
                         <div class="form-group">
                             <label for="service">Что вас интересует?</label>
-                            <select id="service" name="service">
+                            <select id="service" name="Услуга">
                                 <option value="Покупка квартиры">Покупка квартиры</option>
                                 <option value="Продажа квартиры">Продажа квартиры</option>
                                 <option value="Помощь с ипотекой">Помощь с ипотекой</option>
@@ -760,11 +469,10 @@
                             </select>
                         </div>
                         <div class="checkbox-group">
-                            <input type="checkbox" id="agree" name="agree" required>
+                            <input type="checkbox" id="agree" name="Согласие" required>
                             <label for="agree">Я согласен на обработку персональных данных</label>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-submit" id="submitBtn">Записаться на консультацию</button>
-                        <p id="formStatus" style="margin-top: 16px; text-align: center; font-size: 14px; display: none;"></p>
+                        <button type="submit" class="btn btn-primary btn-submit">Записаться на консультацию</button>
                     </form>
                 </div>
             </div>
@@ -802,60 +510,11 @@
         </div>
     </footer>
     
-    <a href="#contact" class="fab" title="Записаться на консультацию">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-        </svg>
-    </a>
+    <a href="#contact" class="fab" title="Записаться на консультацию">💬</a>
     
     <script>
-        function toggleMenu() { 
-            const menu = document.getElementById('mobileMenu');
-            menu.classList.toggle('active');
-        }
-        
-        function toggleFaq(element) { 
-            const item = element.parentElement;
-            item.classList.toggle('active');
-        }
-        
-        // Отправка формы
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const btn = document.getElementById('submitBtn');
-            const status = document.getElementById('formStatus');
-            const formData = new FormData(this);
-            
-            btn.textContent = 'Отправка...';
-            btn.disabled = true;
-            
-            // Отправка цели в Яндекс.Метрику
-            if (typeof ym !== 'undefined') { 
-                ym(109706741, 'reachGoal', 'form_submit'); 
-            }
-            
-            fetch(this.action, {
-                method: 'POST',
-                body: formData,
-                headers: { 'Accept': 'application/json' }
-            }).then(response => {
-                if (response.ok) {
-                    status.textContent = 'Спасибо! Заявка успешно отправлена. Мы свяжемся с вами в ближайшее время.';
-                    status.style.color = '#10b981';
-                    status.style.display = 'block';
-                    this.reset();
-                } else {
-                    throw new Error('Ошибка сети');
-                }
-            }).catch(error => {
-                status.textContent = 'Произошла ошибка. Пожалуйста, позвоните нам напрямую.';
-                status.style.color = '#ef4444';
-                status.style.display = 'block';
-            }).finally(() => {
-                btn.textContent = 'Записаться на консультацию';
-                btn.disabled = false;
-            });
-        });
+        function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('active'); }
+        function toggleFaq(element) { element.parentElement.classList.toggle('active'); }
         
         // Ипотечный калькулятор
         function calculateMortgage() {
@@ -871,7 +530,7 @@
             let monthlyPayment = 0;
             if (loanAmount > 0 && monthlyRate > 0 && totalMonths > 0) {
                 monthlyPayment = loanAmount * (monthlyRate * Math.pow(1 + monthlyRate, totalMonths)) / (Math.pow(1 + monthlyRate, totalMonths) - 1);
-            } else if (loanAmount > 0 && rate === 0) {
+            } else if (loanAmount > 0) {
                 monthlyPayment = loanAmount / totalMonths;
             }
             
@@ -900,7 +559,6 @@
             }, 16);
         }
         
-        // Intersection Observer для анимаций
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -914,7 +572,7 @@
                     }
                 }
             });
-        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+        }, { threshold: 0.1 });
         
         document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
         
@@ -924,24 +582,6 @@
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) { target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
-            });
-        });
-        
-        // Отслеживание кликов по телефону
-        document.querySelectorAll('a[href^="tel:"]').forEach(link => {
-            link.addEventListener('click', function() {
-                if (typeof ym !== 'undefined') { 
-                    ym(109706741, 'reachGoal', 'phone_click'); 
-                }
-            });
-        });
-        
-        // Отслеживание кликов по кнопкам
-        document.querySelectorAll('.btn-primary').forEach(button => {
-            button.addEventListener('click', function() {
-                if (typeof ym !== 'undefined') { 
-                    ym(109706741, 'reachGoal', 'cta_click'); 
-                }
             });
         });
     </script>
